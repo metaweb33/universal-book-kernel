@@ -16,33 +16,56 @@
             flex-direction: column;
             align-items: center;
         }
-        h1 { color: #4caf50; }
+        h1 { color: #4caf50; margin-bottom: 5px; }
+        #meta-container {
+            text-align: center;
+            margin-bottom: 20px;
+            display: none;
+        }
+        #meta-container h2 { margin: 5px 0; color: #ffffff; }
+        #meta-container p { margin: 0; color: #888; font-style: italic; }
+        
         #drop-zone {
             border: 2px dashed #4caf50;
             border-radius: 8px;
             width: 80%;
             max-width: 600px;
-            padding: 40px;
+            padding: 60px 40px;
             text-align: center;
             cursor: pointer;
             background-color: #1e1e1e;
-            transition: background 0.3s;
+            transition: background 0.3s, border-color 0.3s;
+            margin-top: 40px;
         }
-        #drop-zone:hover { background-color: #252525; }
+        #drop-zone:hover { background-color: #252525; border-color: #81c784; }
+        
         #viewer {
-            margin-top: 20px;
-            width: 90%;
-            max-width: 1000px;
+            margin-top: 10px;
+            width: 95%;
+            max-width: 1200px;
             display: grid;
-            grid-template-columns: 1fr 1fr; /* Double colonne pour le bilingue */
-            gap: 20px;
+            grid-template-columns: 1fr 1fr; /* Mode double colonne */
+            gap: 25px;
         }
         .pane {
             background-color: #1e1e1e;
-            padding: 20px;
-            border-radius: 6px;
+            padding: 25px;
+            border-radius: 8px;
             border: 1px solid #333;
-            min-height: 200px;
+            min-height: 400px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+        .pane h3 {
+            border-bottom: 2px solid #4caf50;
+            padding-bottom: 8px;
+            margin-top: 0;
+            color: #4caf50;
+        }
+        .content {
+            white-space: pre-wrap; /* Conserve les sauts de ligne du Markdown brut */
+            line-height: 1.6;
+            font-family: 'Courier New', Courier, monospace; /* Typo code temporaire */
+            color: #d4d4d4;
         }
     </style>
 </head>
@@ -50,38 +73,95 @@
 
     <h1>Universal Book Kernel Reader</h1>
     
-    <div id="drop-zone" id="file-input">
-        <p>Glissez-déposez votre fichier <strong>.ubk</strong> ici ou cliquez pour choisir</p>
+    <div id="meta-container">
+        <h2 id="book-title">Titre du livre</h2>
+        <p id="book-author">Auteur</p>
+    </div>
+    
+    <div id="drop-zone">
+        <p>Glissez-deposez votre fichier <strong>book_output.ubk</strong> ici<br>ou cliquez pour explorer votre ordinateur.</p>
         <input type="file" id="file-chooser" accept=".ubk" style="display:none">
     </div>
 
     <div id="viewer" style="display: none;">
-        <div class="pane" id="pane-fr"><h2>Version FR</h2><div class="content"></div></div>
-        <div class="pane" id="pane-en"><h2>Version EN</h2><div class="content"></div></div>
+        <div class="pane" id="pane-fr">
+            <h3>Version Française (Source)</h3>
+            <div class="content"></div>
+        </div>
+        <div class="pane" id="pane-en">
+            <h3>English Version (Target)</h3>
+            <div class="content"></div>
+        </div>
     </div>
 
     <script>
         const dropZone = document.getElementById('drop-zone');
         const fileChooser = document.getElementById('file-chooser');
 
-        // Déclenche le choix de fichier au clic sur la zone
+        // Gestion des clics et drag-and-drop
         dropZone.addEventListener('click', () => fileChooser.click());
-
         fileChooser.addEventListener('change', (e) => handleFile(e.target.files[0]));
-        
         dropZone.addEventListener('dragover', (e) => e.preventDefault());
         dropZone.addEventListener('drop', (e) => {
             e.preventDefault();
             handleFile(e.dataTransfer.files[0]);
         });
 
-        // Fonction maîtresse pour traiter le conteneur UBK
+        // Fonction maîtresse d'extraction du conteneur UBK
         function handleFile(file) {
             if (!file) return;
-            console.log("Fichier reçu :", file.name);
-            
-            // C'est ici que la magie de JSZip va intervenir
-            alert("Fichier détecté ! Prêt pour l'extraction de la structure.");
+
+            // Chargement de l'archive via JSZip
+            JSZip.loadAsync(file).then(async function(zip) {
+                
+                // 1. Contrôle strict du Mimetype souverain
+                const mimeFile = zip.file("mimetype");
+                if (!mimeFile) {
+                    alert("🛑 Format invalide : Fichier 'mimetype' manquant à la racine du conteneur.");
+                    return;
+                }
+                const mimeText = (await mimeFile.async("string")).trim();
+                if (mimeText !== "application/ubk+zip") {
+                    alert("🛑 Erreur de format : Ce fichier n'est pas un conteneur UBK valide (" + mimeText + ").");
+                    return;
+                }
+
+                // 2. Extraction et lecture de la configuration centrale
+                const configFile = zip.file("book.json");
+                if (!configFile) {
+                    alert("🛑 Erreur : Fichier 'book.json' introuvable dans le conteneur.");
+                    return;
+                }
+                const configText = await configFile.async("string");
+                const config = JSON.parse(configText);
+
+                // Mettre à jour l'interface avec les métadonnées lues dans le JSON
+                document.getElementById('book-title').innerText = config.metadata.title;
+                document.getElementById('book-author').innerText = "Par " + config.metadata.author + " — Mode : " + config.languages.rendering_mode;
+
+                // 3. Extraction dynamique des textes du premier chapitre (Spine)
+                const firstChapter = config.manifest.spine[0];
+                const frPath = firstChapter.files.FR;
+                const enPath = firstChapter.files.EN;
+
+                const frText = await zip.file(frPath).async("string");
+                const enText = await zip.file(enPath).async("string");
+
+                // Injection des textes bruts dans les panneaux respectifs
+                document.getElementById('pane-fr').querySelector('.content').innerText = frText;
+                document.getElementById('pane-en').querySelector('.content').innerText = enText;
+
+                // Bascule de l'affichage : On cache le drop-zone, on montre le livre
+                dropZone.style.display = 'none';
+                document.getElementById('meta-container').style.display = 'block';
+                document.getElementById('viewer').style.display = 'grid';
+
+                console.log("⚡ Conteneur UBK extrait et rendu en mémoire avec succès.");
+
+            }).catch(function(err) {
+                alert("❌ Impossible de lire l'archive UBK : " + err.message);
+                console.error(err);
+            });
         }
     </script>
 </body>
