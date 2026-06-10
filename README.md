@@ -207,7 +207,3 @@ Bâtissons ensemble le moteur de document le plus léger, vertueux et puissant d
 ```
 
 ***
-
-Une fois ce fichier validé, ton projet aura une vitrine d'entrée absolument impeccable. Dis-moi quand c'est tout vert de ton côté ! 🚀🖥️
-
-```
