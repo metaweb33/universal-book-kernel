@@ -1,0 +1,47 @@
+{
+  "ubk_version": "1.0.0",
+  "metadata": {
+    "title": "Blockchain: Neo-Bordeaux 2033",
+    "author": "metaweb33",
+    "identifier": "urn:uuid:8f3c9a1b-72d4-4bca-9bde-432109abcdef",
+    "publication_date": "2026-06-10"
+  },
+  "languages": {
+    "default": "FR",
+    "supported": ["FR", "EN"],
+    "rendering_mode": "parallel-synced"
+  },
+  "audio_casting": {
+    "engine": "neural-tts-v2",
+    "voices": {
+      "narrator_fr": "fr-FR-HenriNeural",
+      "narrator_en": "en-US-TonyNeural",
+      "characters": {
+        "Marc": {
+          "FR": "fr-FR-RemyNeural",
+          "EN": "en-GB-RyanNeural"
+        },
+        "Lucie": {
+          "FR": "fr-FR-EloiseNeural",
+          "EN": "en-US-JennyNeural"
+        }
+      }
+    }
+  },
+  "manifest": {
+    "spine": [
+      {
+        "id": "ch1",
+        "type": "text/umd",
+        "files": {
+          "FR": "Text/chapter1_FR.umd",
+          "EN": "Text/chapter1_EN.umd"
+        }
+      }
+    ],
+    "resources": {
+      "styles": ["Style/theme.css"],
+      "notes": "Text/notes.umd"
+    }
+  }
+}
