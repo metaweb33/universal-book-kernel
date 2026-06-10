@@ -6,6 +6,7 @@ import zipfile
 # Configuration des constantes
 CONFIG_FILE = "book.json"
 OUTPUT_FILENAME = "book_output.ubk"
+MIMETYPE_VALUE = "application/ubk+zip"  # L'identifiant officiel de ton format
 
 
 def load_config():
@@ -39,7 +40,7 @@ def extract_tags(file_path):
 
 
 def validate_and_compile():
-    print("🚀 Démarrage de la compilation UBK...")
+    print("🚀 Démarrage de la compilation UBK (Standard Mode)...")
     print("--------------------------------------------------")
     
     # 1. Chargement du JSON
@@ -53,6 +54,7 @@ def validate_and_compile():
         print("❌ Erreur : Le manifeste ne contient aucun chapitre dans la section 'spine'.")
         return
 
+    # On commence la liste des fichiers physiques à inclure APRES le mimetype
     all_files_to_pack = [CONFIG_FILE]
     error_detected = False
 
@@ -74,7 +76,7 @@ def validate_and_compile():
         en_p, en_n = extract_tags(en_path)
 
         if fr_p is None or en_p is None:
-            return # Un fichier physique est manquant, l'erreur a déjà été affichée
+            return
 
         # Vérification des paragraphes
         if fr_p != en_p:
@@ -106,16 +108,21 @@ def validate_and_compile():
     print(f"\n📦 Packaging de l'archive sans compression dans '{OUTPUT_FILENAME}'...")
     try:
         with zipfile.ZipFile(OUTPUT_FILENAME, "w", zipfile.ZIP_STORED) as ubk_zip:
+            
+            # CRUCIAL : Injection du fichier 'mimetype' en TOUT PREMIER position
+            ubk_zip.writestr("mimetype", MIMETYPE_VALUE)
+            print(f" ➕ Injecté en premier : mimetype ({MIMETYPE_VALUE})")
+            
+            # Ajout des autres fichiers du projet
             for file in all_files_to_pack:
                 if os.path.exists(file):
                     ubk_zip.write(file)
                     print(f" ➕ Ajouté : {file}")
                 else:
-                    # Sécurité pour les ressources annexes (styles, etc.)
                     print(f"⚠️ Attention : Le fichier optionnel '{file}' n'existe pas, ignoré.")
         
         print("--------------------------------------------------")
-        print(f"🎉 Succès ! Ton livre numérique a été compilé avec brio : {OUTPUT_FILENAME}")
+        print(f"🎉 Succès ! Ton conteneur standardisé a été généré : {OUTPUT_FILENAME}")
         
     except Exception as e:
         print(f"❌ Erreur lors de la création de l'archive : {e}")
