@@ -1,0 +1,14 @@
+# Chapitre 1 : Le Réveil du Réseau
+
+{#p_001} La brume électronique s'avançait lentement sur le Marbre de la cité, saturant les capteurs atmosphériques de résidus de données.
+
+{#p_002} Dans l'ombre de la station de routage, deux silhouettes attendaient que le sous-répartiteur soit totalement réinitialisé.
+
+- [Marc] Est-ce que le script de conversion est enfin prêt ?
+- [Lucie] Presque, la compilation des blocs est en cours. Le nœud principal devrait valider la transaction d'ici quelques secondes.
+
+{#p_003} Un bip strident brisa le silence. Lucie pointa son terminal vers la console centrale^[note_001]. Les voyants passèrent au vert synchrone.
+
+---
+# Registre des Notes
+^[note_001]: Console de type Grid-Flex de troisième génération, optimisée pour la lecture de flux de données brutes sans latence.
