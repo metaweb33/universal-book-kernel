@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UBK Universal Reader</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 { color: #4caf50; }
+        #drop-zone {
+            border: 2px dashed #4caf50;
+            border-radius: 8px;
+            width: 80%;
+            max-width: 600px;
+            padding: 40px;
+            text-align: center;
+            cursor: pointer;
+            background-color: #1e1e1e;
+            transition: background 0.3s;
+        }
+        #drop-zone:hover { background-color: #252525; }
+        #viewer {
+            margin-top: 20px;
+            width: 90%;
+            max-width: 1000px;
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Double colonne pour le bilingue */
+            gap: 20px;
+        }
+        .pane {
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 6px;
+            border: 1px solid #333;
+            min-height: 200px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Universal Book Kernel Reader</h1>
+    
+    <div id="drop-zone" id="file-input">
+        <p>Glissez-déposez votre fichier <strong>.ubk</strong> ici ou cliquez pour choisir</p>
+        <input type="file" id="file-chooser" accept=".ubk" style="display:none">
+    </div>
+
+    <div id="viewer" style="display: none;">
+        <div class="pane" id="pane-fr"><h2>Version FR</h2><div class="content"></div></div>
+        <div class="pane" id="pane-en"><h2>Version EN</h2><div class="content"></div></div>
+    </div>
+
+    <script>
+        const dropZone = document.getElementById('drop-zone');
+        const fileChooser = document.getElementById('file-chooser');
+
+        // Déclenche le choix de fichier au clic sur la zone
+        dropZone.addEventListener('click', () => fileChooser.click());
+
+        fileChooser.addEventListener('change', (e) => handleFile(e.target.files[0]));
+        
+        dropZone.addEventListener('dragover', (e) => e.preventDefault());
+        dropZone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            handleFile(e.dataTransfer.files[0]);
+        });
+
+        // Fonction maîtresse pour traiter le conteneur UBK
+        function handleFile(file) {
+            if (!file) return;
+            console.log("Fichier reçu :", file.name);
+            
+            // C'est ici que la magie de JSZip va intervenir
+            alert("Fichier détecté ! Prêt pour l'extraction de la structure.");
+        }
+    </script>
+</body>
+</html>
