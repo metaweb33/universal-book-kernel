@@ -1,6 +1,6 @@
-# 🚀 Universal Book Kernel (UBK) & Ultra Markdown (UMD)
+# 🚀 Universal Book Kernel (UBK) & Ultra Markdup Definition (UMD)
 
-*Read this in: [English](#-universal-book-kernel-ubk--ultra-markdown-umd) | [Français](#-universal-book-kernel-ubk--ultra-markdown-umd-fr)*
+*Read this in: [English](#-universal-book-kernel-ubk--Markdup Definition-umd) | [Français](#-universal-book-kernel-ubk--Markdup Definition-umd-fr)*
 
 ---
 
@@ -12,7 +12,7 @@ Current digital publishing formats are obsolete or overly complex. **PDFs** rema
 
 **UBK (Universal Book Kernel)** reinvents the document and digital book architecture around a simple triptyque: **Absolute lightness (zero data duplication), Universal structure, and Progressive enhancement.**
 
-At the core of UBK is **UMD (Ultra Markdown)**: a syntax fully backward-compatible with standard Markdown, but augmented with invisible semantic metadata. These metadata unlock groundbreaking reading features (dynamic multi-voice audio, synchronous bilingual display, intelligent popups) while maintaining a clean text base.
+At the core of UBK is **UMD (Markdup Definition)**: a syntax fully backward-compatible with standard Markdown, but augmented with invisible semantic metadata. These metadata unlock groundbreaking reading features (dynamic multi-voice audio, synchronous bilingual display, intelligent popups) while maintaining a clean text base.
 
 ---
 
@@ -102,7 +102,7 @@ Let's build the lightest, cleanest, and most powerful document engine on the Web
 
 ---
 
-# 🚀 Universal Book Kernel (UBK) & Ultra Markdown (UMD) [FR]
+# 🚀 Universal Book Kernel (UBK) & Ultra Markdup Definition (UMD) [FR]
 
 Le standard de document universel, ouvert, éco-conçu, nativement bilingue et taillé pour l'immersion interactive.
 
@@ -112,7 +112,7 @@ Les formats d'édition actuels sont obsolètes ou trop lourds. Le **PDF** reste 
 
 **UBK (Universal Book Kernel)** réinvente l'écosystème du document et du livre numérique autour d'un triptyque simple : **Légèreté absolue (zéro duplication), Structure universelle et Amélioration progressive.**
 
-À la base de l'UBK se trouve l'**UMD (Ultra Markdown)** : une syntaxe textuelle standard, entièrement compatible avec le Markdown classique, mais augmentée de métadonnées sémantiques invisibles qui activent des fonctionnalités de lecture inédites (audio multi-voix, affichage bilingue synchrone, infobulles intelligentes).
+À la base de l'UBK se trouve l'**UMD (Ultra Markdup Definition)** : une syntaxe textuelle standard, entièrement compatible avec le Markdown classique, mais augmentée de métadonnées sémantiques invisibles qui activent des fonctionnalités de lecture inédites (audio multi-voix, affichage bilingue synchrone, infobulles intelligentes).
 
 ---
 
