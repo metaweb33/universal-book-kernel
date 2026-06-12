@@ -71,7 +71,7 @@ The `.ubk` (or `.epub4`) container is a compressed archive packaged in **Stored*
 ├── 📄 mimetype          # Raw MIME type: application/ubk+zip
 ├── 📄 book.json         # Global contract (Metadata, languages, AI voice casting)
 ├── 📂 Text/
-│   ├── 📄 ch1_FR.umd    # Original text in Ultra Markdown
+│   ├── 📄 ch1_FR.umd    # Original text in Ultra Markdup Definition
 │   ├── 📄 ch1_EN.umd    # Translated version aligned on identical IDs
 │   └── 📄 notes.umd     # Centralized footnotes and references registry
 ├── 📂 Media/
@@ -175,7 +175,7 @@ Le conteneur `.ubk` (ou `.epub4`) est une archive compressée en mode **Stored**
 ├── 📄 mimetype          # Type MIME brut : application/ubk+zip
 ├── 📄 book.json         # Contrat global (Métadonnées, langues, casting des voix IA)
 ├── 📂 Text/
-│   ├── 📄 cap1_FR.umd   # Texte original en Ultra Markdown
+│   ├── 📄 cap1_FR.umd   # Texte original en Ultra Markdup Definition
 │   ├── 📄 cap1_EN.umd   # Version traduite alignée sur les mêmes ID
 │   └── 📄 notes.umd     # Registre centralisé des notes et références
 ├── 📂 Media/
