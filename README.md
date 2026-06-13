@@ -35,7 +35,6 @@ The core reader (`omega-core.jar`) is lightweight and read-only. Editing is mana
 
 </td>
 <td valign="top">
-
 UBK (Projet OMEGA) n'est pas une simple liseuse ; c'est un **Moteur Sémantique Piloté par les Données** construit au-dessus du Markdown standard.
 
 Là où le Markdown gère la mise en forme classique (gras, italique, titres), le moteur OMEGA interprète **le comportement, le contexte audio-visuel et l'interactivité pédagogique** sans altérer la structure du texte.
