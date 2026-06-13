@@ -51,10 +51,10 @@ La logique du moteur est totalement séparée du code source via JSON :
 * `syntax_rules.json` : Gère le comportement des textes techniques et pédagogiques.
 
 **3. La Bascule Pédagogique "U-Emoji"**
-UBK introduces a dual-reading mode for technical content. A developer can write raw code blocks (`{java}`), and by using the gamified tag (`{/ujava}`), the engine automatically translates keywords into visual emojis based on the dictionary, transforming a standard ebook into an interactive learning environment.
+UBK introduit un mode double-lecture pour les contenus techniques. Un développeur peut écrire des blocs de code bruts (`{java}`), et en utilisant la balise gamifiée (`{/ujava}`), Le moteur traduit automatiquement les mots-clés en émojis visuels à partir du dictionnaire, transformant ainsi un livre électronique standard en un environnement d'apprentissage interactif.
 
 **4. Séparation Stricte des Outils**
-Le moteur de lecture (`omega-core.jar`) is lightweight and read-only. Editing is managed by decoupled, web-based local tools (Python/Flask) that generate the `.umd` files and update the JSON rules dynamically.
+Le moteur de lecture (`omega-core.jar`) est léger et en lecture seule. L'édition est gérée par des outils locaux indépendants, basés sur le Web (Python/Flask), qui génèrent les fichiers `.umd` et mettent à jour dynamiquement les règles JSON.
 
 </td>
 </tr>
