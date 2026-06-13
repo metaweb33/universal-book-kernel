@@ -31,6 +31,7 @@ The engine logic is entirely decoupled from the source code via JSON:
 **3. The "U-Emoji" Pedagogical Switch**
 UBK introduces a dual-reading mode for technical content. A developer can write raw code blocks (`{java}`), and by using the gamified tag (`{/ujava}`), the engine automatically translates keywords into visual emojis based on the dictionary, transforming a standard ebook into an interactive learning environment.
 
+
 **4. Strict Tooling Separation**
 The core reader (`omega-core.jar`) is lightweight and read-only. Editing is managed by decoupled, web-based local tools (Python/Flask) that generate the `.umd` files and update the JSON rules dynamically.
 
