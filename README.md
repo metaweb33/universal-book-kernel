@@ -17,6 +17,7 @@ UBK (Project OMEGA) is not just another e-reader; it is a **Data-Driven Semantic
 
 While Markdown handles standard text formatting (bold, italics, headers), the OMEGA Engine interprets **behavior, audio-visual context, and pedagogical interactivity** without modifying the core text structure.
 
+
 ### 🏗️ Core Architecture
 
 **1. Markdown + Semantic Layer**
