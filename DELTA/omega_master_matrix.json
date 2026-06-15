@@ -1,0 +1,28 @@
+{
+  "omega_master_matrix": {
+    "print": {
+      "emoji": "🖨️",
+      "description": "Affichage de texte sur la console standard",
+      "mappings": {
+        "java": "System.out.println(\"%s\");",
+        "python": "print(\"%s\")",
+        "javascript": "console.log(\"%s\");",
+        "cpp": "std::cout << \"%s\" << std::endl;",
+        "rust": "println!(\"%s\");",
+        "go": "fmt.Println(\"%s\")"
+      }
+    },
+    "variable_int": {
+      "emoji": "📦",
+      "description": "Déclaration d'une variable entière",
+      "mappings": {
+        "java": "int %s = %s;",
+        "python": "%s = %s",
+        "javascript": "let %s = %s;",
+        "cpp": "int %s = %s;",
+        "rust": "let %s: i32 = %s;",
+        "go": "var %s int = %s"
+      }
+    }
+  }
+}

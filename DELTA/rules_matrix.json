@@ -1,0 +1,15 @@
+{
+  "header": ["parametre", "mode_pedagogique", "mode_expert", "mode_minimal", "mode_dyslexie"],
+  "rules_matrix": [
+    ["display_emojis", true, false, false, true],
+    ["click_behavior", "popup_footnote", "inline_code", "none", "popup_audio"],
+    ["missing_concept_action", "suggest_bridge", "show_raw_null", "hide_line", "suggest_bridge"],
+    ["max_loaded_dictionaries", 3, 10, 1, 2],
+    ["auto_detect_tokens", true, true, false, true],
+    ["font_family", "serif", "monospace", "sans-serif", "OpenDyslexic"],
+    ["line_height", 1.6, 1.4, 1.5, 1.8],
+    ["text_align", "justify", "left", "justify", "left"],
+    ["show_minimap", true, true, false, false],
+    ["sync_scroll", true, false, false, true]
+  ]
+}

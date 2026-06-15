@@ -1,0 +1,26 @@
+{
+  "header": [
+    "id", "symbol", "type", "regex", 
+    "roman_prefix", "roman_style", "roman_alignment", "roman_page_behavior", 
+    "sms_component", "sms_alignment", "sms_visual_fx", "sms_audio"
+  ],
+  "umd_matrix": [
+    ["meta_paragraph", "§", "META", "^\\{§_([0-9]{4})\\}\\s*(.*)$", "", "normal", "justify", null, null, "left", null, null],
+    ["dialogue_standard", "💬", "INTERACTION", "^💬\\[([A-Z0-9_]+)\\]\\s*(.*)$", "— ", "normal", "justify", null, "bubble", "dynamic_by_character", null, null],
+    ["dialogue_ai", "🤖", "INTERACTION", "^🤖\\[([A-Z0-9_]+)\\]\\s*(.*)$", "— [TERMINAL] : ", "monospace", "justify", null, "terminal_bubble", null, "matrix_font_cyan", null],
+    ["context_phone", "📞", "CONTEXT", "^::📞\\s*(.*)$", "☎ ", "italic", "justify", null, "call_screen", null, "phone_ui", null],
+    ["context_letter", "📜", "CONTEXT", "^::📜\\s*(.*)$", "", "italic", "right_indent", null, "popup", null, "parchment_texture", null],
+    ["context_rain", "🌧️", "CONTEXT", "^::🌧️\\s*(.*)$", "", "normal", "justify", null, null, null, "rain_drops", "rain_loop.ogg"],
+    ["context_storm", "🌩️", "CONTEXT", "^::🌩️\\s*(.*)$", "", "italic_bold", "center", null, null, null, "flash_white", "thunder_strike.wav"],
+    ["context_clock", "🕰️", "CONTEXT", "^::🕰️\\s*(.*)$", "", "normal", "justify", null, null, null, "pulse_screen", "clock_ticking.wav"],
+    ["audio_stream", "🎶", "CONTEXT", "^🎶\\[([a-zA-Z0-9_./-]+)\\]$", "[Musique] ", "italic", "right", null, null, null, null, "dynamic_capture_loop"],
+    ["layout_title_page", "👑", "LAYOUT", "^::👑\\s*(.*)$", "", "title_h1", "center", "isolate_page", "splash_screen", null, null, null],
+    ["layout_quarter_page", "🔽", "LAYOUT", "^::🔽\\s*(.*)$", "", "title_h2", "center", "push_25_percent", null, "center", null, null],
+    ["layout_half_page", "⏬", "LAYOUT", "^::⏬\\s*(.*)$", "", "title_h2", "center", "push_50_percent", null, "center", null, null],
+    ["layout_dedication", "💝", "LAYOUT", "^::💝\\s*(.*)$", "", "italic", "right", "push_33_percent", "toast_message", null, null, null],
+    ["layout_poetry_center", "🎯", "LAYOUT", "^::🎯\\s*(.*)$", "", "normal", "block_center", null, null, "center", null, null],
+    ["layout_page_break", "---", "LAYOUT", "^---$", "", "normal", "justify", "force_new_page", "divider_line", null, null, null],
+    ["layout_section_break", "***", "LAYOUT", "^\\*\\*\\*$", "* * *", "normal", "center", "double_spacing", null, "center", null, null],
+    ["layout_footnote_def", "[*", "LAYOUT", "^\\[\\*([0-9]+)\\]\\s*(.*)$", "Note : ", "small_text", "bottom_page", null, "hidden_until_clicked", null, null, null]
+  ]
+}
