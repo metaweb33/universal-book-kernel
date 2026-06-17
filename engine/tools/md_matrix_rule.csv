@@ -1,0 +1,22 @@
+rule_id|||element_type|||markdown_syntax|||omega_token|||html_semantic|||description
+MD_H1|||block|||# |||--omega-token-h1|||<h1>|||Titre majeur de niveau 1
+MD_H2|||block|||## |||--omega-token-h2|||<h2>|||Titre de section de niveau 2
+MD_H3|||block|||### |||--omega-token-h3|||<h3>|||Sous-section de niveau 3
+MD_H4|||block|||#### |||--omega-token-h4|||<h4>|||Sous-section mineure de niveau 4
+MD_H5|||block|||##### |||--omega-token-h5|||<h5>|||Sous-section résiduelle de niveau 5
+MD_H6|||block|||###### |||--omega-token-h6|||<h6>|||Sous-section résiduelle de niveau 6
+MD_PARA|||block|||(default)|||--omega-token-p|||<p>|||Bloc de paragraphe de texte standard
+MD_BOLD_STAR|||inline|||**text**|||--omega-token-strong|||<strong>|||Emphase forte via double astérisque
+MD_BOLD_UNDER|||inline|||__text__|||--omega-token-strong|||<strong>|||Emphase forte via double tiret bas
+MD_ITALIC_STAR|||inline|||*text*|||--omega-token-em|||<em>|||Emphase normale via simple astérisque
+MD_ITALIC_UNDER|||inline|||_text_|||--omega-token-em|||<em>|||Emphase normale via simple tiret bas
+MD_CODE_INLINE|||inline|||`text`|||--omega-token-code-inline|||<code>|||Fragment de code informatique en ligne
+MD_CODE_BLOCK|||block|||```|||--omega-token-code-block|||<pre><code>|||Bloc de code informatique multi-lignes
+MD_BLOCKQUOTE|||block|||> |||--omega-token-blockquote|||<blockquote>|||Citation en bloc ou extrait de texte externe
+MD_UL_STAR|||block|||* |||--omega-token-ul|||<ul><li>|||Élément de liste non ordonnée (astérisque)
+MD_UL_DASH|||block|||- |||--omega-token-ul|||<ul><li>|||Élément de liste non ordonnée (tiret)
+MD_OL|||block|||1. |||--omega-token-ol|||<ol><li>|||Élément de liste ordonnée numérotée
+MD_HR_DASH|||block|||---|||--omega-token-hr|||<hr>|||Ligne de séparation horizontale (tirets)
+MD_HR_STAR|||block|||***|||--omega-token-hr|||<hr>|||Ligne de séparation horizontale (astérisques)
+MD_LINK|||inline|||[txt](url)|||--omega-token-link|||<a>|||Lien hypertexte avec texte d'ancrage
+MD_IMAGE|||inline|||![alt](url)|||--omega-token-image|||<img>|||Inclusion d'image externe et son texte alternatif
