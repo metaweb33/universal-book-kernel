@@ -1,0 +1,656 @@
+emoji|||representation|||concept|||python|||javascript|||rust|||go|||java|||cpp|||csharp|||swift|||kotlin|||latex
+# ==========================================
+# SECTION 1 : Scripts & Control Flow (Expanded)
+# ==========================================
+🖨️|||print|||Print / Output|||print([1])|||console.log([1])|||println!("{}", [1])|||fmt.Println([1])|||System.out.println([1])|||std::cout << [1] << std::endl;|||Console.WriteLine([1])|||print([1])|||println([1])|||\text{print}([1])
+📦|||let|||Variable Declaration|||[1] = [2]|||let [1] = [2]|||let [1] = [2]|||[1] := [2]|||auto [1] = [2]|||auto [1] = [2]|||var [1] = [2]|||var [1] = [2]|||val [1] = [2]|||[1] = [2]
+📋|||array|||Array / List Creation|||[[1]]|||[[1]]|||vec![[1]]|||[]any{[1]}|||new ArrayList<>(List.of([1]))|||std::vector{[1]}|||new[] {[1]}|||[[1]]|||arrayListOf([1])|||\{[1]\}
+❓|||if|||If Condition|||if [1]:|||if ([1]) {|||if [1] {|||if [1] {|||if ([1]) {|||if ([1]) {|||if ([1]) {|||if [1] {|||if ([1]) {|||\text{if } [1]
+❔|||elif|||Else If Condition|||elif [1]:|||} else if ([1]) {|||} else if [1] {|||} else if [1] {|||} else if ([1]) {|||} else if ([1]) {|||} else if ([1]) {|||} else if [1] {|||} else if ([1]) {|||\text{else if } [1]
+❗|||else|||Else Condition|||else:|||} else {|||} else {|||} else {|||} else {|||} else {|||} else {|||} else {|||} else {|||\text{else}
+🔁|||for|||For Loop|||for [1] in [2]:|||for (let [1] of [2]) {|||for [1] in [2] {|||for [1] := range [2] {|||for (var [1] : [2]) {|||for (const auto& [1] : [2]) {|||foreach (var [1] in [2]) {|||for [1] in [2] {|||for ([1] in [2]) {|||\forall [1] \in [2]
+🔄|||while|||While Loop|||while [1]:|||while ([1]) {|||while [1] {|||for [1] {|||while ([1]) {|||while ([1]) {|||while ([1]) {|||while [1] {|||while ([1]) {|||\text{while } [1]
+🛠️|||def|||Function Declaration|||def [1]([2]):|||function [1]([2]) {|||fn [1]([2]) {|||func [1]([2]) {|||void [1]([2]) {|||void [1]([2]) {|||void [1]([2]) {|||func [1]([2]) {|||fun [1]([2]) {|||\text{function } [1]([2])
+↩️|||return|||Return Value|||return [1]|||return [1]|||return [1]|||return [1]|||return [1]|||return [1]|||return [1]|||return [1]|||return [1]|||\text{return } [1]
+🤝|||and|||Logical AND|||[1] and [2]|||[1] && [2]|||[1] && [2]|||[1] && [2]|||[1] && [2]|||[1] && [2]|||[1] && [2]|||[1] && [2]|||[1] && [2]|||[1] \land [2]
+🔀|||or|||Logical OR|||[1] or [2]|||[1] || [2]|||[1] || [2]|||[1] || [2]|||[1] || [2]|||[1] || [2]|||[1] || [2]|||[1] || [2]|||[1] || [2]|||[1] \lor [2]
+🚫|||not|||Logical NOT|||not [1]|||![1]|||![1]|||![1]|||![1]|||![1]|||![1]|||![1]|||![1]|||\neg [1]
+⚖️|||eq|||Equality Comparison|||[1] == [2]|||[1] === [2]|||[1] == [2]|||[1] == [2]|||[1] == [2]|||[1] == [2]|||[1] == [2]|||[1] == [2]|||[1] == [2]|||[1] = [2]
+≠|||neq|||Inequality Comparison|||[1] != [2]|||[1] !== [2]|||[1] != [2]|||[1] != [2]|||[1] != [2]|||[1] != [2]|||[1] != [2]|||[1] != [2]|||[1] != [2]|||[1] \neq [2]
+✅|||true|||Boolean True|||True|||true|||true|||true|||true|||true|||true|||true|||true|||\text{true}
+❌|||false|||Boolean False|||False|||false|||false|||false|||false|||false|||false|||false|||false|||\text{false}
+∅|||null|||Null / Empty Value|||None|||null|||None|||nil|||null|||nullptr|||null|||nil|||null|||\emptyset
+
+# ==========================================
+# SECTION 5 : Strings & Collections
+# ==========================================
+🪢|||concat|||String Concatenation|||[1] + [2]|||[1] + [2]|||format!("{}{}", [1], [2])|||[1] + [2]|||[1] + [2]|||[1] + [2]|||[1] + [2]|||[1] + [2]|||[1] + [2]|||[1] \text{ + } [2]
+📏|||strlen|||String Length|||len([1])|||[1].length|||[1].len()|||len([1])|||[1].length()|||[1].length()|||[1].Length|||[1].count|||[1].length|||\text{len}([1])
+🗂️|||count|||Array / List Length|||len([1])|||[1].length|||[1].len()|||len([1])|||[1].size()|||[1].size()|||[1].Count|||[1].count|||[1].size|||[1]\text{.size}
+📥|||push|||Append to Array|||[1].append([2])|||[1].push([2])|||[1].push([2])|||append([1], [2])|||[1].add([2])|||[1].push_back([2])|||[1].Add([2])|||[1].append([2])|||[1].add([2])|||[1] \leftarrow [1] \cup \{[2]\}
+🗺️|||dict|||Map / Dictionary Creation|||{[1]: [2]}|||{[1]: [2]}|||std::collections::HashMap::from([([1], [2])])|||map[any]any{[1]: [2]}|||new HashMap<>(Map.of([1], [2]))|||std::map<any, any>{{[1], [2]}}|||new Dictionary<any, any>{{[1], [2]}}|||[[1]: [2]]|||mapOf([1] to [2])|||\{[1] \mapsto [2]\}
+# ==========================================
+# SECTION 6 : Error Handling & Type Casting
+# ==========================================
+🛡️|||try|||Error Handling Try|||try:|||try {|||if let Ok([2]) = [1] {|||if [1] == nil {|||try {|||try {|||try {|||do {|||try {|||\text{try } [1]
+🪤|||catch|||Error Handling Catch|||except Exception as [1]:|||} catch ([1]) {|||if let Err([1]) = [2] {|||if [1] != nil {|||} catch (Exception [1]) {|||} catch (const std::exception& [1]) {|||} catch (Exception [1]) {|||} catch [1] {|||} catch ([1]: Exception) {|||\text{catch } [1]
+🔢|||parseInt|||String to Integer|||int([1])|||parseInt([1], 10)|||[1].parse::<i32>()|||strconv.Atoi([1])|||Integer.parseInt([1])|||std::stoi([1])|||int.Parse([1])|||Int([1])|||[1].toInt()|||\text{int}([1])
+🔤|||str|||Value to String|||str([1])|||String([1])|||[1].to_string()|||fmt.Sprint([1])|||String.valueOf([1])|||std::to_string([1])|||[1].ToString()|||String([1])|||[1].toString()|||\text{str}([1])
+# ==========================================
+# SECTION 7 : Bitwise Operations
+# ==========================================
+🧬|||bit_and|||Bitwise AND|||[1] & [2]|||[1] & [2]|||[1] & [2]|||[1] & [2]|||[1] & [2]|||[1] & [2]|||[1] & [2]|||[1] & [2]|||[1] and [2]|||[1] \ \& \ [2]
+🧬|||bit_or|||Bitwise OR|||[1] | [2]|||[1] | [2]|||[1] | [2]|||[1] | [2]|||[1] | [2]|||[1] | [2]|||[1] | [2]|||[1] | [2]|||[1] or [2]|||[1] \mid [2]
+🧬|||bit_xor|||Bitwise XOR|||[1] ^ [2]|||[1] ^ [2]|||[1] ^ [2]|||[1] ^ [2]|||[1] ^ [2]|||[1] ^ [2]|||[1] ^ [2]|||[1] ^ [2]|||[1] xor [2]|||[1] \oplus [2]
+左|||bit_shl|||Bitwise Left Shift|||[1] << [2]|||[1] << [2]|||[1] << [2]|||[1] << [2]|||[1] << [2]|||[1] << [2]|||[1] << [2]|||[1] << [2]|||[1] shl [2]|||[1] \ll [2]
+右|||bit_shr|||Bitwise Right Shift|||[1] >> [2]|||[1] >> [2]|||[1] >> [2]|||[1] >> [2]|||[1] >> [2]|||[1] >> [2]|||[1] >> [2]|||[1] >> [2]|||[1] shr [2]|||[1] \gg [2]
+# ==========================================
+# SECTION 8 : Data Serialization & Time
+# ==========================================
+🕸️|||json_str|||JSON Serialization|||json.dumps([1])|||JSON.stringify([1])|||serde_json::to_string(&[1])|||json.Marshal([1])|||gson.toJson([1])|||nlohmann::json([1]).dump()|||JsonSerializer.Serialize([1])|||try? JSONEncoder().encode([1])|||Json.encodeToString([1])|||\text{json}([1])
+🕸️|||json_parse|||JSON Deserialization|||json.loads([1])|||JSON.parse([1])|||serde_json::from_str([1])|||json.Unmarshal([1], &[2])|||gson.fromJson([1], Object.class)|||nlohmann::json::parse([1])|||JsonSerializer.Deserialize<object>([1])|||try? JSONDecoder().decode(Type.self, from: [1])|||Json.parseToJsonElement([1])|||\text{parse}([1])
+⏳|||time_now|||Current Timestamp|||time.time()|||Date.now()|||std::time::SystemTime::now()|||time.Now()|||System.currentTimeMillis()|||std::chrono::system_clock::now()|||DateTime.UtcNow|||Date()|||System.currentTimeMillis()|||\text{now}()
+💤|||sleep|||Execution Delay|||time.sleep([1])|||await new Promise(r => setTimeout(r, [1]))|||std::thread::sleep(std::time::Duration::from_millis([1]))|||time.Sleep([1] * time.Millisecond)|||Thread.sleep([1])|||std::this_thread::sleep_for(std::chrono::milliseconds([1]))|||Thread.Sleep([1])|||try? await Task.sleep(nanoseconds: UInt64([1]) * 1_000_000)|||delay([1])|||\text{sleep}([1])
+# ==========================================
+# SECTION 9 : Object & Structure Basics
+# ==========================================
+🏗️|||class|||Structure / Class Declaration|||class [1]:|||class [1] {|||struct [1] {|||type [1] struct {|||class [1] {|||class [1] {|||class [1] {|||class [1] {|||class [1] {|||\text{class } [1]
+🌱|||new|||Instance Instantiation|||[1]()|||new [1]()|||[1]::new()|||&[1]{}|||new [1]()|||std::make_unique<[1]>()|||new [1]()|||[1]()|||[1]()|||\text{new } [1]
+🎯|||this|||Self Instance Reference|||self|||this|||self|||receiver|||this|||this|||this|||self|||this|||\text{this}
+# ==========================================
+# SECTION 10 : File I/O & File System
+# ==========================================
+📂|||file_read|||Read File to String|||open([1]).read()|||fs.readFileSync([1], 'utf8')|||fs::read_to_string([1])|||os.ReadFile([1])|||Files.readString(Path.of([1]))|||std::ifstream([1])|||File.ReadAllText([1])|||String(contentsOfFile: [1])|||File([1]).readText()|||\text{read}([1])
+💾|||file_write|||Write String to File|||open([1], 'w').write([2])|||fs.writeFileSync([1], [2])|||fs::write([1], [2])|||os.WriteFile([1], []byte([2]), 0644)|||Files.writeString(Path.of([1]), [2])|||std::ofstream([1]) << [2]|||File.WriteAllText([1], [2])|||try? [2].write(toFile: [1], atomically: true, encoding: .utf8)|||File([1]).writeText([2])|||\text{write}([1], [2])
+🔍|||file_exist|||Check File Existence|||os.path.exists([1])|||fs.existsSync([1])|||std::path::Path::new([1]).exists()|||_, err := os.Stat([1]); os.IsNotExist(err)|||Files.exists(Path.of([1]))|||std::filesystem::exists([1])|||File.Exists([1])|||FileManager.default.fileExists(atPath: [1])|||File([1]).exists()|||\text{exists}([1])
+# ==========================================
+# SECTION 11 : Concurrency & Async
+# ==========================================
+⚡|||async|||Asynchronous Function|||async def [1]():|||async function [1]() {|||async fn [1]() {|||go func() {|||CompletableFuture.runAsync(() -> {})|||std::async(std::launch::async, [1])|||async Task [1]() {|||func [1]() async {|||suspend fun [1]() {|||\text{async } [1]
+⏳|||await|||Await Async Operation|||await [1]|||await [1]|||[1].await|||<-[1]|||[1].get()|||[1].get()|||await [1]|||await [1]|||[1].await()|||\text{await } [1]
+🧵|||thread|||Spawn OS Thread|||threading.Thread(target=[1]).start()|||new Worker([1])|||std::thread::spawn([1])|||go [1]()|||new Thread([1]).start()|||std::thread([1])|||new Thread([1]).Start()|||Thread.detachNewThread { [1]() }|||Thread([1]).start()|||\text{spawn}([1])
+# ==========================================
+# SECTION 12 : Cryptography & Hashing
+# ==========================================
+🔒|||sha256|||SHA-256 Secure Hash|||hashlib.sha256([1].encode()).hexdigest()|||crypto.createHash('sha256').update([1]).digest('hex')|||sha256::digest([1])|||sha256.Sum256([]byte([1]))|||MessageDigest.getInstance("SHA-256").digest([1])|||openssl::sha256([1])|||SHA256.HashData(Encoding.UTF8.GetBytes([1]))|||SHA256.hash(data: [1].data(using: .utf8))|||MessageDigest.getInstance("SHA-256").digest([1].toByteArray())|||\mathcal{H}_{256}([1])
+🔑|||md5|||MD5 Hash|||hashlib.md5([1].encode()).hexdigest()|||crypto.createHash('md5').update([1]).digest('hex')|||md5::compute([1])|||md5.Sum([]byte([1]))|||MessageDigest.getInstance("MD5").digest([1])|||openssl::md5([1])|||MD5.HashData(Encoding.UTF8.GetBytes([1]))|||Insecure.MD5.hash(data: [1].data(using: .utf8))|||MessageDigest.getInstance("MD5").digest([1].toByteArray())|||\mathcal{H}_{md5}([1])
+# ==========================================
+# SECTION 13 : Networking & HTTP Requests
+# ==========================================
+🌐|||http_get|||HTTP GET Request|||requests.get([1]).text|||await (await fetch([1])).text()|||reqwest::get([1]).await?.text().await?|||http.Get([1])|||HttpClient.newHttpClient().send([1], BodyHandlers.ofString())|||cpr::Get(cpr::Url{[1]}).text|||await new HttpClient().GetStringAsync([1])|||String(contentsOf: URL(string: [1])!)|||URL([1]).readText()|||\text{get}([1])
+📤|||http_post|||HTTP POST Request|||requests.post([1], data=[2])|||await fetch([1], {method:'POST', body:[2]})|||reqwest::Client::new().post([1]).body([2]).send().await?|||http.Post([1], "application/json", [2])|||HttpClient.newHttpClient().send(HttpRequest.newBuilder().uri(URI.create([1])).POST(BodyPublishers.ofString([2])).build(), BodyHandlers.ofString())|||cpr::Post(cpr::Url{[1]}, cpr::Body{[2]}).text|||await new HttpClient().PostAsync([1], new StringContent([2]))|||var r=URLRequest(url:URL(string:[1])!);r.httpMethod="POST";r.httpBody=[2];URLSession.shared.data(for:r)|||HttpClient().post([1]){setBody([2])}|||\text{post}([1], [2])
+# ==========================================
+# SECTION 14 : System, Process & Environment
+# ==========================================
+🌿|||env_get|||Get Environment Variable|||os.environ.get([1])|||process.env[[1]]|||std::env::var([1])|||os.Getenv([1])|||System.getenv([1])|||std::getenv([1])|||Environment.GetEnvironmentVariable([1])|||ProcessInfo.processInfo.environment[[1]]|||System.getenv([1])|||\text{env}([1])
+💻|||cmd_exec|||Execute System Command|||subprocess.run([1], shell=True)|||child_process.execSync([1])|||std::process::Command::new([1]).output()|||exec.Command([1]).Run()|||Runtime.getRuntime().exec([1])|||std::system([1])|||Process.Start([1])|||Process.run(URL(fileURLWithPath:[1]), arguments:[])|||Runtime.getRuntime().exec([1])|||\text{exec}([1])
+🚪|||sys_exit|||Terminate Process|||sys.exit([1])|||process.exit([1])|||std::process::exit([1])|||os.Exit([1])|||System.exit([1])|||std::exit([1])|||Environment.Exit([1])|||exit([1])|||exitProcess([1])|||\text{exit}([1])
+# ==========================================
+# SECTION 15 : Functional Primitives
+# ==========================================
+🧪|||map|||Transform Collection Elements|||list(map([1], [2]))|||[2].map([1])|||[2].iter().map([1]).collect()|||for _, v := range [2] { [1](v) }|||[2].stream().map([1]).collect(Collectors.toList())|||std::transform([2].begin(), [2].end(), [2].begin(), [1])|||[2].Select([1]).ToList()|||[2].map([1])|||[2].map([1])|||\text{map}([1], [2])
+filter|||filter|||Filter Collection Elements|||list(filter([1], [2]))|||[2].filter([1])|||[2].into_iter().filter([1]).collect()|||for _, v := range [2] { if [1](v) {} }|||[2].stream().filter([1]).collect(Collectors.toList())|||std::copy_if([2].begin(), [2].end(), std::back_inserter(res), [1])|||[2].Where([1]).ToList()|||[2].filter([1])|||[2].filter([1])|||\text{filter}([1], [2])
+# ==========================================
+# SECTION 16 : Math & Core Arithmetic
+# ==========================================
+🧮|||math_abs|||Absolute Value|||abs([1])|||Math.abs([1])|||[1].abs()|||math.Abs([1])|||Math.abs([1])|||std::abs([1])|||Math.Abs([1])|||abs([1])|||abs([1])|||\left| [1] \right|
+📈|||math_pow|||Exponentiation / Power|||[1] ** [2]|||Math.pow([1], [2])|||[1].pow([2])|||math.Pow([1], [2])|||Math.pow([1], [2])|||std::pow([1], [2])|||Math.Pow([1], [2])|||pow([1], [2])|||[1].pow([2])|||[1]^{[2]}
+√|||math_sqrt|||Square Root|||math.sqrt([1])|||Math.sqrt([1])|||[1].sqrt()|||math.Sqrt([1])|||Math.sqrt([1])|||std::sqrt([1])|||Math.Sqrt([1])|||sqrt([1])|||sqrt([1])|||\sqrt{[1]}
+🎲|||math_rand|||Random Number (0-1)|||random.random()|||Math.random()|||rand::random::<f64>()|||rand.Float64()|||Math.random()|||(double)rand()/RAND_MAX|||new Random().NextDouble()|||Double.random(in: 0...1)|||Random.nextDouble()|||\text{rand}()
+# ==========================================
+# SECTION 17 : Regular Expressions (RegEx)
+# ==========================================
+🎯|||regex_match|||RegEx Pattern Matching|||re.match([1], [2])|||new RegExp([1]).test([2])|||Regex::new([1]).unwrap().is_match([2])|||regexp.MustCompile([1]).MatchString([2])|||Pattern.matches([1], [2])|||std::regex_match([2], std::regex([1]))|||Regex.IsMatch([2], [1])|||[2].range(of: [1], options: .regularExpression) != nil|||Regex([1]).containsMatchIn([2])|||[2] \sim [1]
+✏️|||regex_replace|||RegEx Global Replace|||re.sub([1], [2], [3])|||[3].replace(new RegExp([1], 'g'), [2])|||Regex::new([1]).unwrap().replace_all([3], [2])|||regexp.MustCompile([1]).ReplaceAllString([3], [2])|||[3].replaceAll([1], [2])|||std::regex_replace([3], std::regex([1]), [2])|||Regex.Replace([3], [1], [2])|||[3].replacingOccurrences(of: [1], with: [2], options: .regularExpression)|||[3].replace(Regex([1]), [2])|||\text{sub}([3], [1] \rightarrow [2])
+# ==========================================
+# SECTION 18 : Testing & Assertions
+# ==========================================
+🚨|||assert_eq|||Assert Equality|||assert [1] == [2]|||console.assert([1] === [2])|||assert_eq!([1], [2])|||if [1] != [2] { panic() }|||assertEquals([1], [2])|||assert([1] == [2])|||Assert.AreEqual([1], [2])|||XCTAssertEqual([1], [2])|||assertEquals([1], [2])|||[1] \equiv [2]
+# ==========================================
+# SECTION 19 : Advanced Collections Operations
+# ==========================================
+🧼|||sort|||Sort Collection|||[1].sort()|||[1].sort()|||[1].sort()|||sort.Slice([1], func(i, j int) bool { return [1][i] < [1][j] })|||Collections.sort([1])|||std::sort([1].begin(), [1].end())|||[1].Sort()|||[1].sort()|||[1].sort()|||\text{sort}([1])
+🙃|||reverse|||Reverse Collection|||[1].reverse()|||[1].reverse()|||[1].reverse()|||for i, j := 0, len([1])-1; i < j; i, j = i+1, j-1 { [1][i], [1][j] = [1][j], [1][i] }|||Collections.reverse([1])|||std::reverse([1].begin(), [1].end())|||[1].Reverse()|||[1].reverse()|||[1].reverse()|||\text{reverse}([1])
+🎯|||includes|||Collection Contains Element|||[2] in [1]|||[1].includes([2])|||[1].contains(&[2])|||slices.Contains([1], [2])|||[1].contains([2])|||std::find([1].begin(), [1].end(), [2]) != [1].end()|||[1].Contains([2])|||[1].contains([2])|||[1].contains([2])|||[2] \in [1]
+✂️|||slice|||Extract Sub-array / Slice|||[1][[2]:[3]]|||[1].slice([2], [3])|||&[1][[2]..[3]]|||[1][[2]:[3]]|||[1].subList([2], [3])|||std::vector<any>([1].begin()+[2], [1].begin()+[3])|||[1][[2]..[3]]|||Array([1][[2]..<[3]])|||[1].subList([2], [3])|||[1]_{[[2]:[3]]}
+# ==========================================
+# SECTION 20 : Memory & Reference Management
+# ==========================================
+👥|||clone|||Deep Copy / Clone Object|||copy.deepcopy([1])|||structuredClone([1])|||[1].clone()|||json.Unmarshal(json.Marshal([1]), &[2])|||[1].clone()|||auto [2] = [1]|||JsonSerializer.Deserialize<T>(JsonSerializer.Serialize([1]))|||[1]|||[1].copy()|||\text{clone}([1])
+📍|||address|||Get Memory Address / Pointer|||id([1])|||not_supported|||&[1] as *const _|||&[1]|||System.identityHashCode([1])|||&[1]|||fixed(void* p = &[1])|||withUnsafePointer(to: &[1]) { $0 }|||System.identityHashCode([1])|||\text{addr}([1])
+#===========================================
+# SECTION 21 : CLI Executable Context
+# ==========================================
+📥|||cli_args|||Command Line Arguments|||sys.argv|||process.argv|||std::env::args().collect::<Vec<_>>()|||os.Args|||args|||argv|||Environment.GetCommandLineArgs()|||CommandLine.arguments|||args|||\text{args}
+# ==========================================
+# SECTION 22 : System Information & Diagnostics
+# ==========================================
+🆔|||sys_pid|||Get Current Process ID|||os.getpid()|||process.pid|||std::process::id()|||os.Getpid()|||ProcessHandle.current().pid()|||getpid()|||Environment.ProcessId|||ProcessInfo.processInfo.processIdentifier|||ProcessHandle.current().pid()|||\text{pid}()
+🎛️|||sys_os|||Get OS Platform Name|||sys.platform|||process.platform|||std::env::consts::OS|||runtime.GOOS|||System.getProperty("os.name")|||not_standard|||Environment.OSVersion.Platform.ToString()|||ProcessInfo.processInfo.operatingSystemVersionString|||System.getProperty("os.name")|||\text{os}()
+# ==========================================
+# SECTION 23 : Low-Level Thread Synchronization
+# ==========================================
+🔒|||mutex_init|||Initialize Mutex Lock|||threading.Lock()|||not_supported|||std::sync::Mutex::new([1])|||new(sync.Mutex)|||new ReentrantLock()|||std::mutex()|||new object()|||NSLock()|||ReentrantLock()|||\text{mutex}()
+🔑|||mutex_lock|||Acquire Mutex Lock|||[1].acquire()|||not_supported|||let _guard = [1].lock().unwrap();|||[1].Lock()|||[1].lock()|||[1].lock()|||Monitor.Enter([1])|||[1].lock()|||[1].lock()|||\text{lock}([1])
+🔓|||mutex_unlock|||Release Mutex Lock|||[1].release()|||not_supported|||drop(_guard)|||[1].Unlock()|||[1].unlock()|||[1].unlock()|||Monitor.Exit([1])|||[1].unlock()|||[1].unlock()|||\text{unlock}([1])
+# ==========================================
+# SECTION 24 : Custom Types & Enumerations
+# ==========================================
+🏷️|||enum|||Enum Declaration|||class [1](Enum):|||Object.freeze({[2]})|||enum [1] { [2] }|||type [1] int; const (...) |||enum [1] { [2] }|||enum class [1] { [2] };|||enum [1] { [2] }|||enum [1] { case [2] }|||enum class [1] { [2] }|||\text{enum } [1]
+📌|||const|||Constant Declaration|||[1] = [2]|||const [1] = [2]|||const [1]: [3] = [2];|||const [1] = [2]|||final [3] [1] = [2];|||const [3] [1] = [2];|||const [3] [1] = [2];|||let [1] = [2]|||const val [1] = [2]|||[1] \equiv [2]
+# ==========================================
+# SECTION 25 : String & Number Formatting
+# ==========================================
+🎯|||fmt_float|||Format Float (2 Decimal Places)|||f"{[1]:.2f}"|||[1].toFixed(2)|||format!("{:.2}", [1])|||fmt.Sprintf("%.2f", [1])|||String.format("%.2f", [1])|||std::format("{:.2f}", [1])|||$"{[1]:F2}"|||String(format: "%.2f", [1])|||String.format("%.2f", [1])|||\text{round}([1], 2)
+# ==========================================
+# SECTION 26 : Sets & Unique Collections
+# ==========================================
+🎨|||set_init|||Set Initialization|||set([1])|||new Set([1])|||std::collections::HashSet::from_iter([1])|||map[any]bool{[1]: true}|||new HashSet<>(List.of([1]))|||std::set<any>({[1]})|||new HashSet<any>([1])|||Set([1])|||setOf([1])|||\{[1]\}
+➕|||set_add|||Add Element to Set|||[1].add([2])|||[1].add([2])|||[1].insert([2])|||[1][[2]] = true|||[1].add([2])|||[1].insert([2])|||[1].Add([2])|||[1].insert([2])|||[1].add([2])|||[1] \cup \{[2]\}
+❌|||set_remove|||Remove Element from Set|||[1].remove([2])|||[1].delete([2])|||[1].remove(&[2])|||delete([1], [2])|||[1].remove([2])|||[1].erase([2])|||[1].Remove([2])|||[1].remove([2])|||[1].remove([2])|||[1] \setminus \{[2]\}
+🤝|||set_union|||Set Union|||[1] | [2]|||new Set([...[1], ...[2]])|||[1].union(&[2])|||/* manual loop */|||new HashSet<>(){{addAll([1]); addAll([2]);}}|||/* std::set_union */|||new HashSet<any>([1]).Union([2])|||[1].union([2])|||[1].union([2])|||[1] \cup [2]
+# ==========================================
+# SECTION 27 : Type Inspection & Reflection
+# ==========================================
+🔍|||type_of|||Get Type Name / Class|||type([1]).__name__|||typeof [1]|||std::any::type_name::<T>()|||reflect.TypeOf([1]).Name()|||[1].getClass().getSimpleName()|||typeid([1]).name()|||[1].GetType().Name|||String(describing: type(of: [1]))|||[1]::class.simpleName||\text{type}([1])
+🧬|||is_instance|||Check Instance Type|||isinstance([1], [2])|||[1] instanceof [2]|||/* trait bound / Any */|||_, ok := any([1]).([2])|||[1] instanceof [2]|||dynamic_cast<[2]*>(&[1]) != nullptr|||[1] is [2]|||[1] is [2]|||[1] is [2]|||[1] \in [2]
+# ==========================================
+# SECTION 28 : Advanced Functional Reductions
+# ==========================================
+🌀|||reduce|||Accumulate / Fold Collection|||functools.reduce([1], [2])|||[2].reduce([1])|||[2].iter().fold(init, [1])|||/* manual loop */|||[2].stream().reduce(init, [1])|||std::accumulate([2].begin(), [2].end(), init, [1])|||[2].Aggregate([1])|||[2].reduce(init, [1])|||[2].reduce([1])||\text{fold}([1], [2])
+∀|||all|||Check If All Match Predicate|||all([1](x) for x in [2])|||[2].every([1])|||[2].iter().all([1])|||/* manual loop */|||[2].stream().allMatch([1])|||std::all_of([2].begin(), [2].end(), [1])|||[2].All([1])|||[2].all([1])|||[2].all([1])||\forall x \in [2], [1](x)
+∃|||any|||Check If Any Match Predicate|||any([1](x) for x in [2])|||[2].some([1])|||[2].iter().any([1])|||/* manual loop */|||[2].stream().anyMatch([1])|||std::any_of([2].begin(), [2].end(), [1])|||[2].Any([1])|||[2].contains(where: [1])|||[2].any([1])||\exists x \in [2], [1](x)
+# ==========================================
+# SECTION 29 : Base64 Data Encoding
+# ==========================================
+📦|||b64_encode|||Base64 String Encoding|||base64.b64encode([1].encode()).decode()|||btoa([1])|||base64::encode([1])|||base64.StdEncoding.EncodeToString([]byte([1]))|||Base64.getEncoder().encodeToString([1].getBytes())|||/* manual/openssl */|||Convert.ToBase64String(Encoding.UTF8.GetBytes([1]))|||Data([1].utf8).base64EncodedString()|||Base64.getEncoder().encodeToString([1].toByteArray())|||\text{b64enc}([1])
+📦|||b64_decode|||Base64 String Decoding|||base64.b64decode([1]).decode()|||atob([1])|||String::from_utf8(base64::decode([1]).unwrap()).unwrap()|||res, _ := base64.StdEncoding.DecodeString([1])|||new String(Base64.getDecoder().decode([1]))|||/* manual/openssl */|||Encoding.UTF8.GetString(Convert.FromBase64String([1]))|||String(data: Data(base64Encoded: [1])!, encoding: .utf8)|||String(Base64.getDecoder().decode([1]))|||\text{b64dec}([1])
+# ==========================================
+# SECTION 30 : URL Percent Utilities
+# ==========================================
+🔗|||url_encode|||URL Percent Encoding|||urllib.parse.quote([1])|||encodeURIComponent([1])|||urlencoding::encode([1])|||url.QueryEscape([1])|||URLEncoder.encode([1], StandardCharsets.UTF_8)|||/* manual */|||Uri.EscapeDataString([1])|||[1].addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)|||URLEncoder.encode([1], "UTF-8")|||\text{urlenc}([1])
+🔗|||url_decode|||URL Percent Decoding|||urllib.parse.unquote([1])|||decodeURIComponent([1])|||urlencoding::decode([1]).unwrap()|||url.QueryUnescape([1])|||URLDecoder.decode([1], StandardCharsets.UTF_8)|||/* manual */|||Uri.UnescapeDataString([1])|||[1].removingPercentEncoding|||URLDecoder.decode([1], "UTF-8")|||\text{urldec}([1])
+# ==========================================
+# SECTION 31 : Continuous Math Boundaries
+# ==========================================
+📉|||math_min|||Minimum Bounds Value|||min([1], [2])|||Math.min([1], [2])|||[1].min([2])|||math.Min([1], [2])|||Math.min([1], [2])|||std::min([1], [2])|||Math.Min([1], [2])|||min([1], [2])|||min([1], [2])|||\min([1], [2])
+📈|||math_max|||Maximum Bounds Value|||max([1], [2])|||Math.max([1], [2])|||[1].max([2])|||math.Max([1], [2])|||Math.max([1], [2])|||std::max([1], [2])|||Math.Max([1], [2])|||max([1], [2])|||max([1], [2])|||\max([1], [2])
+📐|||math_floor|||Floor Boundary Mapping|||math.floor([1])|||Math.floor([1])|||[1].floor()|||math.Floor([1])|||Math.floor([1])|||std::floor([1])|||Math.Floor([1])|||floor([1])|||floor([1])|||\lfloor [1] \rfloor
+📐|||math_ceil|||Ceiling Boundary Mapping|||math.ceil([1])|||Math.ceil([1])|||[1].ceil()|||math.Ceil([1])|||Math.ceil([1])|||std::ceil([1])|||Math.Ceiling([1])|||ceil([1])|||ceil([1])|||\lceil [1] \rceil
+# ==========================================
+# SECTION 32 : UUID & Random Identifiers
+# ==========================================
+🆔|||uuid_v4|||Generate UUID v4|||import uuid; str(uuid.uuid4())|||crypto.randomUUID()|||uuid::Uuid::new_v4().to_string()|||uuid.New().String()|||UUID.randomUUID().toString()|||/* non-standard */|||Guid.NewGuid().ToString()|||UUID().uuidString|||UUID.randomUUID().toString()|||\text{uuid}_{4}()
+# ==========================================
+# SECTION 33 : Path & Directory Operations
+# ==========================================
+◂▸|||path_join|||Join File Paths|||os.path.join([1], [2])|||path.join([1], [2])|||std::path::Path::new([1]).join([2])|||filepath.Join([1], [2])|||Path.of([1], [2]).toString()|||std::filesystem::path([1]) / [2]|||Path.Combine([1], [2])|||URL(fileURLWithPath:[1]).appendingPathComponent([2]).path|||File([1], [2]).path|||[1] \mathbin{/} [2]
+📁|||dir_create|||Create Directory Tree|||os.makedirs([1], exist_ok=True)|||fs.mkdirSync([1], {recursive:true})|||std::fs::create_dir_all([1])|||os.MkdirAll([1], 0755)|||Files.createDirectories(Path.of([1]))|||std::filesystem::create_directories([1])|||Directory.CreateDirectory([1])|||try? FileManager.default.createDirectory(atPath:[1], withIntermediateDirectories:true)|||File([1]).mkdirs()|||\text{mkdir}([1])
+# ==========================================
+# SECTION 34 : Trigonometry & Math Constants
+# ==========================================
+🥧|||math_pi|||Mathematical Pi Constant|||math.pi|||Math.PI|||std::f64::consts::PI|||math.Pi|||Math.PI|||std::numbers::pi|||Math.PI|||Double.pi|||Math.PI|||\pi
+📐|||math_sin|||Trigonometric Sine|||math.sin([1])|||Math.sin([1])|||[1].sin()|||math.Sin([1])|||Math.sin([1])|||std::sin([1])|||Math.Sin([1])|||sin([1])|||sin([1])|||\sin([1])
+📐|||math_cos|||Trigonometric Cosine|||math.cos([1])|||Math.cos([1])|||[1].cos()|||math.Cos([1])|||Math.cos([1])|||std::cos([1])|||Math.Cos([1])|||cos([1])|||cos([1])|||\cos([1])
+# ==========================================
+# SECTION 35 : Advanced Date & Time Formatting
+# ==========================================
+📆|||date_iso|||Current Time to ISO-8601|||datetime.now().isoformat()|||new Date().toISOString()|||chrono::Utc::now().to_rfc3339()|||time.Now().Format(time.RFC3339)|||OffsetDateTime.now().toString()|||/* non-standard */|||DateTime.UtcNow.ToString("o")|||ISO8601DateFormatter().string(from:Date())|||java.time.Instant.now().toString()|||\text{iso8601}()
+# ==========================================
+# SECTION 36 : Bitwise Operations
+# ==========================================
+🔢|||bitwise_and|||Bitwise AND|||[1] & [2]|||[1] & [2]|||[1] & [2]|||[1] & [2]|||[1] & [2]|||[1] & [2]|||[1] & [2]|||[1] & [2]|||[1] and [2]|||[1] \wedge [2]
+🔢|||bitwise_or|||Bitwise OR|||[1] | [2]|||[1] | [2]|||[1] | [2]|||[1] | [2]|||[1] | [2]|||[1] | [2]|||[1] | [2]|||[1] | [2]|||[1] or [2]|||[1] \vee [2]
+🔢|||bitwise_xor|||Bitwise XOR|||[1] ^ [2]|||[1] ^ [2]|||[1] ^ [2]|||[1] ^ [2]|||[1] ^ [2]|||[1] ^ [2]|||[1] ^ [2]|||[1] ^ [2]|||[1] xor [2]|||[1] \oplus [2]
+🔢|||bitwise_not|||Bitwise NOT / Complement|||~[1]|||~[1]|||![1]|||^[1]|||~[1]|||~[1]|||~[1]|||~[1]|||[1].inv()|||\neg [1]
+# ==========================================
+# SECTION 37 : Collection Statistics
+# ==========================================
+∑|||math_sum|||Sum of Collection Elements|||sum([1])|||[1].reduce((a, b) => a + b, 0)|||[1].iter().sum()|||/* manual loop */|||[1].stream().mapToDouble(x -> x).sum()|||std::accumulate([1].begin(), [1].end(), 0)|||[1].Sum()|||[1].reduce(0, +)|||[1].sum()|||\sum [1]
+# ==========================================
+# SECTION 38 : Thread Pausing & Delays
+# ==========================================
+💤|||sys_sleep|||Execution Delay / Sleep|||time.sleep([1])|||await new Promise(r => setTimeout(r, [1] * 1000))|||std::thread::sleep(std::time::Duration::from_secs([1]))|||time.Sleep([1] * time.Second)|||Thread.sleep([1] * 1000)|||std::this_thread::sleep_for(std::chrono::seconds([1]))|||Thread.Sleep([1] * 1000)|||try? await Task.sleep(nanoseconds: UInt64([1]) * 1_000_000_000)|||Thread.sleep([1] * 1000L)|||\text{sleep}([1]
+# ==========================================
+# SECTION 40 : Cryptographic Hashing
+# ==========================================
+🔒|||crypto_sha256|||SHA-256 Secure Hash|||hashlib.sha256([1].encode()).hexdigest()|||crypto.createHash('sha256').update([1]).digest('hex')|||sha2::Sha256::digest([1])|||fmt.Sprintf("%x", sha256.Sum256([]byte([1])))|||String.format("%064x", new BigInteger(1, MessageDigest.getInstance("SHA-256").digest([1].getBytes())))|||/* non-standard */|||BitConverter.ToString(SHA256.Create().ComputeHash(Encoding.UTF8.GetBytes([1]))).Replace("-", "")|||SHA256.hash(data: Data([1].utf8)).map{String(format:"%02hhx",$0)}.joined()|||MessageDigest.getInstance("SHA-256").digest([1].toByteArray()).joinToString(""){String.format("%02x",it)}||\text{sha256}([1])
+# ==========================================
+# SECTION 41 : Async Concurrency & Futures
+# ==========================================
+⏳|||async_all|||Await All Futures / Promises|||await asyncio.gather(*[1])|||await Promise.all([1])|||futures::future::join_all([1]).await|||/* sync.WaitGroup manual */|||CompletableFuture.allOf([1]).join()|||/* non-standard */|||await Task.WhenAll([1])|||/* task group / async let */|||[1].awaitAll()||\text{await\_all}([1])
+# ==========================================
+# SECTION 42 : Numerical Rounding
+# ==========================================
+🎯|||math_round|||Round to Nearest Integer|||round([1])|||Math.round([1])|||[1].round()|||math.Round([1])|||Math.round([1])|||std::round([1])|||Math.Round([1])|||round([1])|||[1].roundToInt()||\text{round}([1])
+🪓|||math_trunc|||Truncate Decimal Part|||math.trunc([1])|||Math.trunc([1])|||[1].trunc()|||math.Trunc([1])|||(int)[1]|||std::trunc([1])|||Math.Truncate([1])|||trunc([1])|||kotlin.math.truncate([1])||\text{trunc}([1])
+# ==========================================
+# SECTION 43 : Environment Variables
+# ==========================================
+🔑|||env_get|||Get Environment Variable|||os.environ.get([1])|||process.env[[1]]|||std::env::var([1])|||os.Getenv([1])|||System.getenv([1])|||std::getenv([1])|||Environment.GetEnvironmentVariable([1])|||ProcessInfo.processInfo.environment[[1]]|||System.getenv([1])||\text{env}([1])
+📝|||env_set|||Set Environment Variable|||os.environ[[1]] = [2]|||process.env[[1]] = [2]|||std::env::set_var([1], [2])|||os.Setenv([1], [2])|||/* read-only mapping/hack */|||setenv([1], [2], 1)||\text{setenv}([1], [2])|||Environment.SetEnvironmentVariable([1], [2])|||setenv([1], [2], 1)||\text{System.setProperty}([1], [2])||\text{env}([1] \leftarrow [2])
+# ==========================================
+# SECTION 44 : Basic File I/O Operations
+# ==========================================
+📖|||file_read|||Read Entire File to String|||open([1], 'r').read()|||fs.readFileSync([1], 'utf8')|||std::fs::read_to_string([1])|||res, _ := os.ReadFile([1])|||Files.readString(Path.of([1]))|||/* ifstream manual */|||File.ReadAllText([1])|||try? String(contentsOfFile: [1], encoding: .utf8)|||File([1]).readText()||\text{read}([1])
+💾|||file_write|||Write String to File|||open([1], 'w').write([2])|||fs.writeFileSync([1], [2])|||std::fs::write([1], [2])|||os.WriteFile([1], []byte([2]), 0644)|||Files.writeString(Path.of([1]), [2])|||/* ofstream manual */|||File.WriteAllText([1], [2])|||try? [2].write(toFile: [1], atomically: true, encoding: .utf8)|||File([1]).writeText([2])||\text{write}([1], [2])
+# ==========================================
+# SECTION 45 : Network HTTP Requests
+# ==========================================
+🌐|||http_get|||HTTP GET Request (Text)|||requests.get([1]).text|||await (await fetch([1])).text()|||reqwest::get([1]).await.unwrap().text().await.unwrap()|||res, _ := http.Get([1])|||HttpClient.newHttpClient().send(HttpRequest.newBuilder().uri(URI.create([1])).build(), HttpResponse.BodyHandlers.ofString()).body()|||/* non-standard */|||await new HttpClient().GetStringAsync([1])|||try? await URLSession.shared.data(from: URL(string: [1])!).0|||URL([1]).readText()||\text{get}([1])
+# ==========================================
+# SECTION 46 : Regular Expression Basics
+# ==========================================
+🔍|||regex_match|||Regex Pattern Match|||re.match([1], [2])|||[2].match([1])|||regex::Regex::new([1]).unwrap().is_match([2])|||regexp.MatchString([1], [2])|||Pattern.matches([1], [2])|||std::regex_match([2], std::regex([1]))|||Regex.IsMatch([2], [1])|||[2].range(of: [1], options: .regularExpression) != nil|||Regex([1]).containsMatchIn([2])|||\text{match}([1], [2])
+# ==========================================
+# SECTION 47 : Process Control & Exits
+# ==========================================
+🛑|||sys_exit|||Terminate Process with Code|||sys.exit([1])|||process.exit([1])|||std::process::exit([1])|||os.Exit([1])|||System.exit([1])|||std::exit([1])|||Environment.Exit([1])|||exit([1])|||exitProcess([1])|||\text{exit}([1])
+# ==========================================
+# SECTION 48 : Dictionary & Map Operations
+# ==========================================
+🗺️|||map_init|||Map / Dictionary Initialization|||{[1]: [2]}|||{[1]: [2]}|||std::collections::HashMap::from([([1], [2])])|||map[any]any{[1]: [2]}|||Map.of([1], [2])|||std::map<any, any>{{[1], [2]}}|||new Dictionary<any, any>{{[1], [2]}}|||[[1]: [2]]|||mapOf([1] to [2])|||\{[1] \mapsto [2]\}
+🔑|||map_get|||Get Value by Key|||[1].get([2])|||[1][[2]]|||[1].get(&[2])|||[1][[2]]|||[1].get([2])|||[1][[2]]|||[1][[2]]|||[1][[2]]|||[1][[2]]|||[1]([2])
+# ==========================================
+# SECTION 49 : Basic Algebraic Functions
+# ==========================================
+📐|||math_abs|||Absolute Value|||abs([1])|||Math.abs([1])|||[1].abs()|||math.Abs([1])|||Math.abs([1])|||std::abs([1])|||Math.Abs([1])|||abs([1])|||kotlin.math.abs([1])||||[1]|
+💥|||math_pow|||Raise to Power|||[1] ** [2]|||Math.pow([1], [2])|||[1].pow([2])|||math.Pow([1], [2])|||Math.pow([1], [2])|||std::pow([1], [2])|||Math.Pow([1], [2])|||pow([1], [2])|||[1].toDouble().pow([2])|||[1]^{[2]}
+# ==========================================
+# SECTION 50 : Advanced Roots & Logarithms
+# ==========================================
+🧮|||math_sqrt|||Square Root|||math.sqrt([1])|||Math.sqrt([1])|||[1].sqrt()|||math.Sqrt([1])|||Math.sqrt([1])|||std::sqrt([1])|||Math.Sqrt([1])|||sqrt([1])|||kotlin.math.sqrt([1])|||\sqrt{[1]}
+🪵|||math_log|||Natural Logarithm (ln)|||math.log([1])|||Math.log([1])|||[1].ln()|||math.Log([1])|||Math.log([1])|||std::log([1])|||Math.Log([1])|||log([1])|||kotlin.math.log([1])|||\ln([1])
+# ==========================================
+# SECTION 51 : Substring Position Analysis
+# ==========================================
+📍|||str_index_of|||Find Substring Index|||[1].find([2])|||[1].indexOf([2])|||[1].find([2])|||strings.Index([1], [2])|||[1].indexOf([2])|||[1].find([2])|||[1].IndexOf([2])|||[1].range(of: [2])?.lowerBound|||[1].indexOf([2])|||\text{index\_of}([1], [2])
+⏬|||str_starts_with|||Check String Prefix|||[1].startswith([2])|||[1].startsWith([2])|||[1].starts_with([2])|||strings.HasPrefix([1], [2])|||[1].startsWith([2])|||[1].starts_with([2])|||[1].StartsWith([2])|||[1].hasPrefix([2])|||[1].startsWith([2])|||\text{starts\_with}([1], [2])
+# ==========================================
+# SECTION 52 : Explicit Data Type Parsing
+# ==========================================
+🔢|||parse_int|||Parse String to Integer|||int([1])|||parseInt([1], 10)|||[1].parse::<i32>().unwrap()|||strconv.Atoi([1])|||Integer.parseInt([1])|||std::stoi([1])|||int.Parse([1])|||Int([1])|||[1].toInt()|||\text{int}([1])
+🌊|||parse_float|||Parse String to Float|||float([1])|||parseFloat([1])|||[1].parse::<f64>().unwrap()|||strconv.ParseFloat([1], 64)|||Double.parseDouble([1])|||std::stod([1])|||double.Parse([1])|||Double([1])|||[1].toDouble()|||\text{float}([1])
+# ==========================================
+# SECTION 53 : Runtime Testing Assertions
+# ==========================================
+⚖️|||assert_eq|||Assert Equality Test|||assert [1] == [2]|||console.assert([1] === [2])|||assert_eq!([1], [2]);|||/* manual check */|||assert [1] == [2];|||assert([1] == [2]);|||Debug.Assert([1] == [2]);|||assert([1] == [2])|||assert([1] == [2])|||[1] \equiv [2]
+# ==========================================
+# SECTION 54 : String Case & Modification
+# ==========================================
+🔤|||str_upper|||Convert to Uppercase|||[1].upper()|||[1].toUpperCase()|||[1].to_uppercase()|||strings.ToUpper([1])|||[1].toUpperCase()|||/* manual/boost */|||[1].ToUpper()|||[1].uppercased()|||[1].uppercase()|||\text{upper}([1])
+🔤|||str_lower|||Convert to Lowercase|||[1].lower()|||[1].toLowerCase()|||[1].to_lowercase()|||strings.ToLower([1])|||[1].toLowerCase()|||/* manual/boost */|||[1].ToLower()|||[1].lowercased()|||[1].lowercase()|||\text{lower}([1])
+✂️|||str_trim|||Trim Whitespace|||[1].strip()|||[1].trim()|||[1].trim()|||strings.TrimSpace([1])|||[1].trim()|||/* manual/boost */|||[1].Trim()|||[1].trimmingCharacters(in: .whitespacesAndNewlines)|||[1].trim()|||\text{trim}([1])
+# ==========================================
+# SECTION 55 : Basic Functional List Operations
+# ==========================================
+🗺️|||list_map|||Map Function Over List|||list(map([1], [2]))|||[2].map([1])|||[2].iter().map([1]).collect::<Vec<_>>()|||/* manual loop */|||[2].stream().map([1]).collect(Collectors.toList())|||std::transform([2].begin(), [2].end(), res.begin(), [1])|||[2].Select([1])|||[2].map([1])|||[2].map([1])||\text{map}([1], [2])
+🛡️|||list_filter|||Filter List by Predicate|||list(filter([1], [2]))|||[2].filter([1])|||[2].into_iter().filter([1]).collect::<Vec<_>>()|||/* manual loop */|||[2].stream().filter([1]).collect(Collectors.toList())|||/* std::copy_if manual */|||[2].Where([1])|||[2].filter([1])|||[2].filter([1])||\text{filter}([1], [2])
+# ==========================================
+# SECTION 56 : Exception & Error Handling
+# ==========================================
+🚨|||error_throw|||Raise / Throw Exception|||raise Exception([1])|||throw new Error([1])|||panic!([1])|||panic([1])|||throw new Exception([1])|||throw std::runtime_error([1])|||throw new Exception([1])|||throw MyError.runtimeError([1])|||throw Exception([1])||\text{throw}([1])
+# ==========================================
+# SECTION 57 : Diagnostic Console Outputs
+# ==========================================
+📢|||log_error|||Write to Standard Error|||print([1], file=sys.stderr)|||console.error([1])|||eprintln!([1])|||fmt.Fprintln(os.Stderr, [1])|||System.err.println([1])|||std::cerr << [1] << std::endl;|||Console.Error.WriteLine([1])|||fputs([1], stderr)|||System.err.println([1])||\text{stderr}([1])
+# ==========================================
+# SECTION 58 : Collection Sorting & Ordering
+# ==========================================
+🔀|||list_sort|||Sort Collection Elements|||sorted([1])|||[1].sort()|||[1].sort()|||sort.Slice([1], func(i, j int) bool { return [1][i] < [1][j] })|||Collections.sort([1])|||std::sort([1].begin(), [1].end())|||[1].Sort()|||[1].sort()|||[1].sort()||\text{sort}([1])
+🔄|||list_reverse|||Reverse Collection Order|||[1][::-1]|||[1].reverse()|||[1].reverse()|||/* manual loop */|||Collections.reverse([1])|||std::reverse([1].begin(), [1].end())|||[1].Reverse()|||[1].reverse()|||[1].reverse()||\text{reverse}([1])
+# ==========================================
+# SECTION 59 : String Segmentation & Merging
+# ==========================================
+✂️|||str_split|||Split String by Delimiter|||[1].split([2])|||[1].split([2])|||[1].split([2]).collect::<Vec<_>>()|||strings.Split([1], [2])|||[1].split([2])|||/* manual stringstream */|||[1].Split([2])|||[1].components(separatedBy: [2])|||[1].split([2])||\text{split}([1], [2])
+🧵|||str_join|||Join Elements with Separator|||[2].join([1])|||[1].join([2])|||[1].join([2])|||strings.Join([1], [2])|||String.join([2], [1])|||/* manual loop */|||String.Join([2], [1])|||[1].joined(separator: [2])|||[1].joinToString([2])||\text{join}([1], [2])
+# ==========================================
+# SECTION 60 : Key-Value Inspection
+# ==========================================
+🔑|||map_keys|||Extract Map Keys|||list([1].keys())|||Object.keys([1])|||[1].keys().collect::<Vec<_>>()|||/* manual loop */|||new ArrayList<>([1].keySet())|||/* manual loop */|||new List<any>([1].Keys)|||Array([1].keys)|||[1].keys.toList()||\text{dom}([1])
+💎|||map_values|||Extract Map Values|||list([1].values())|||Object.values([1])|||[1].values().collect::<Vec<_>>()|||/* manual loop */|||new ArrayList<>([1].values())|||/* manual loop */|||new List<any>([1].Values)|||Array([1].values)|||[1].values.toList()||\text{ran}([1])
+# ==========================================
+# SECTION 61 : Mathematical Exponentials & Constants
+# ==========================================
+e|||math_exp|||Natural Exponential|||math.exp([1])|||Math.exp([1])|||[1].exp()|||math.Exp([1])|||Math.exp([1])|||std::exp([1])|||Math.Exp([1])|||exp([1])|||kotlin.math.exp([1])|||e^{[1]}
+🌿|||math_e|||Euler's Constant e|||math.e|||Math.E|||std::f64::consts::E|||math.E|||Math.E|||std::numbers::e|||Math.E|||M_E|||kotlin.math.E|||e
+# ==========================================
+# SECTION 62 : Advanced String Alterations
+# ==========================================
+🔄|||str_replace|||Replace Substring Pattern|||[1].replace([2], [3])|||[1].replace([2], [3])|||[1].replace([2], [3])|||strings.ReplaceAll([1], [2], [3])|||[1].replace([2], [3])|||/* manual/boost */|||[1].Replace([2], [3])|||[1].replacingOccurrences(of: [2], with: [3])|||[1].replace([2], [3])|||\text{replace}([1], [2], [3])
+🔁|||str_repeat|||Repeat String N Times|||[1] * [2]|||[1].repeat([2])|||[1].repeat([2])|||strings.Repeat([1], [2])|||[1].repeat([2])|||/* manual loop */|||new string([1][0], [2])|||String(repeating: [1], count: [2])|||[1].repeat([2])|||[1] \times [2]
+# ==========================================
+# SECTION 63 : List Membership & Extraction
+# ==========================================
+🍰|||list_slice|||Extract Sublist Slice|||[1][[2]:[3]]|||[1].slice([2], [3])|||[1][[2]..[3]].to_vec()|||[1][[2]:[3]]|||[1].subList([2], [3])|||std::vector<T>([1].begin()+[2], [1].begin()+[3])|||[1].GetRange([2], [3]-[2])|||Array([1][[2]..<[3]])|||[1].subList([2], [3])|||[1]_{[[2]:[3]]}
+🔍|||list_contains|||Check List Membership|||[2] in [1]|||[1].includes([2])|||[1].contains(&[2])|||/* manual loop */|||[1].contains([2])|||std::find([1].begin(), [1].end(), [2]) != [1].end()|||[1].Contains([2])|||[1].contains([2])|||[1].contains([2])|||[2] \in [1]
+# ==========================================
+# SECTION 64 : Stack & Queue Operations
+# ==========================================
+➕|||list_push|||Append Element to List|||[1].append([2])|||[1].push([2])|||[1].push([2])|||append([1], [2])|||[1].add([2])|||[1].push_back([2])|||[1].Add([2])|||[1].append([2])|||[1].add([2])|||[1] \leftarrow [2]
+🔗|||list_concat|||Concatenate Two Lists|||[1] + [2]|||[1].concat([2])|||[1].extend([2])|||append([1], [2]...)|||/* manual addAll */|||[1].insert([1].end(), [2].begin(), [2].end())|||[1].AddRange([2])|||[1] + [2]|||[1] + [2]|||[1] \parallel [2]
+# ==========================================
+# SECTION 65 : Environment & CLI Reflection
+# ==========================================
+💻|||sys_args|||Get Command Line Arguments|||sys.argv|||process.argv|||std::env::args().collect::<Vec<_>>()|||os.Args|||Arrays.asList(args)|||/* main params */|||Environment.GetCommandLineArgs()|||CommandLine.arguments|||args.toList()|||\text{args}
+🏠|||sys_cwd|||Get Current Working Directory|||os.getcwd()|||process.cwd()|||std::env::current_dir().unwrap()|||os.Getwd()|||System.getProperty("user.dir")|||std::filesystem::current_path()|||Directory.GetCurrentDirectory()|||FileManager.default.currentDirectoryPath|||System.getProperty("user.dir")|||\text{cwd}
+# ==========================================
+# SECTION 66 : Date & Time Management
+# ==========================================
+🕒|||time_now|||Get Current Date/Time Object|||datetime.datetime.now()|||new Date()|||chrono::Local::now()|||time.Now()|||LocalDateTime.now()|||std::chrono::system_clock::now()|||DateTime.Now|||Date()|||LocalDateTime.now()||\text{now}()
+⏳|||time_epoch|||Get Unix Timestamp (Seconds)|||int(time.time())|||Math.floor(Date.now() / 1000)|||std::time::SystemTime::now().duration_since(std::time::UNIX_EPOCH).unwrap().as_secs()|||time.Now().Unix()|||Instant.now().getEpochSecond()|||std::time(nullptr)|||DateTimeOffset.UtcNow.ToUnixTimeSeconds()|||Int(Date().timeIntervalSince1970)|||Instant.now().epochSecond||\text{epoch}()
+# ==========================================
+# SECTION 67 : Base64 Data Encoding
+# ==========================================
+🔏|||base64_encode|||Base64 Encode String|||base64.b64encode([1].encode()).decode()|||btoa([1])|||base64::encode([1])|||base64.StdEncoding.EncodeToString([]byte([1]))|||Base64.getEncoder().encodeToString([1].getBytes())|||/* non-standard */|||Convert.ToBase64String(Encoding.UTF8.GetBytes([1]))|||Data([1].utf8).base64EncodedString()|||Base64.getEncoder().encodeToString([1].toByteArray())||\text{b64enc}([1])
+🔓|||base64_decode|||Base64 Decode String|||base64.b64decode([1].encode()).decode()|||atob([1])|||String::from_utf8(base64::decode([1]).unwrap()).unwrap()|||res, _ := base64.StdEncoding.DecodeString([1])|||new String(Base64.getDecoder().decode([1]))|||/* non-standard */|||Encoding.UTF8.GetString(Convert.FromBase64String([1]))|||String(data: Data(base64Encoded: [1])!, encoding: .utf8)|||String(Base64.getDecoder().decode([1]))||\text{b64dec}([1])
+# ==========================================
+# SECTION 68 : Concurrency & Thread Spawning
+# ==========================================
+🚀|||thread_spawn|||Spawn Background Thread / Task|||threading.Thread(target=[1]).start()|||/* Web Worker / cluster */|||std::thread::spawn([1]);|||go [1]()|||new Thread([1]).start()|||std::thread([1]).detach()|||Task.Run([1])|||Thread { [1] }.start()|||Thread { [1] }.start()||\text{spawn}([1])
+# ==========================================
+# SECTION 69 : Network HTTP POST
+# ==========================================
+📮|||http_post|||HTTP POST JSON Request|||requests.post([1], json=[2]).text|||await (await fetch([1], {method: 'POST', body: JSON.stringify([2]), headers: {'Content-Type': 'application/json'}})).text()|||reqwest::Client::new().post([1]).json(&[2]).send().await.unwrap().text().await.unwrap()|||/* manual http.Post json */|||HttpClient.newHttpClient().send(HttpRequest.newBuilder().uri(URI.create([1])).header("Content-Type", "application/json").POST(HttpRequest.BodyPublishers.ofString([2])).build(), HttpResponse.BodyHandlers.ofString()).body()|||/* non-standard */|||await new HttpClient().PostAsync([1], new StringContent([2], Encoding.UTF8, "application/json"))|||/* manual URLRequest */|||/* manual HttpURLConnection */||\text{post}([1], [2])
+# ==========================================
+# SECTION 70 : Bitwise Shift Operations
+# ==========================================
+🔢|||bitwise_lshift|||Bitwise Left Shift|||[1] << [2]|||[1] << [2]|||[1] << [2]|||[1] << [2]|||[1] << [2]|||[1] << [2]|||[1] << [2]|||[1] << [2]|||[1] shl [2]|||[1] \ll [2]
+🔢|||bitwise_rshift|||Bitwise Right Shift|||[1] >> [2]|||[1] >> [2]|||[1] >> [2]|||[1] >> [2]|||[1] >> [2]|||[1] >> [2]|||[1] >> [2]|||[1] >> [2]|||[1] shr [2]|||[1] \gg [2]
+# ==========================================
+# SECTION 71 : Trigonometric Functions
+# ==========================================
+📐|||math_sin|||Trigonometric Sine|||math.sin([1])|||Math.sin([1])|||[1].sin()|||math.Sin([1])|||Math.sin([1])|||std::sin([1])|||Math.Sin([1])|||sin([1])|||kotlin.math.sin([1])||\sin([1])
+📐|||math_cos|||Trigonometric Cosine|||math.cos([1])|||Math.cos([1])|||[1].cos()|||math.Cos([1])|||Math.cos([1])|||std::cos([1])|||Math.Cos([1])|||cos([1])|||kotlin.math.cos([1])||\cos([1])
+# ==========================================
+# SECTION 72 : Collection Sizes & Lengths
+# ==========================================
+📏|||list_len|||Get List/Array Length|||len([1])|||[1].length|||[1].len()|||len([1])|||[1].size()|||[1].size()|||[1].Count|||[1].count|||[1].size||\text{len}([1])
+📏|||str_len|||Get String Length|||len([1])|||[1].length|||[1].len()|||len([1])|||[1].length()|||[1].length()|||[1].Length|||[1].count|||[1].length||\text{len}([1])
+# ==========================================
+# SECTION 73 : Mathematical Extrema
+# ==========================================
+📉|||math_min|||Minimum of Two Values|||min([1], [2])|||Math.min([1], [2])|||std::cmp::min([1], [2])|||math.Min([1], [2])|||Math.min([1], [2])|||std::min([1], [2])|||Math.Min([1], [2])|||min([1], [2])|||kotlin.math.min([1], [2])||\min([1], [2])
+📈|||math_max|||Maximum of Two Values|||max([1], [2])|||Math.max([1], [2])|||std::cmp::max([1], [2])|||math.Max([1], [2])|||Math.max([1], [2])|||std::max([1], [2])|||Math.Max([1], [2])|||max([1], [2])|||kotlin.math.max([1], [2])||\max([1], [2])
+# ==========================================
+# SECTION 74 : Floor & Ceiling Rounding
+# ==========================================
+👇|||math_floor|||Floor Rounding (Down)|||math.floor([1])|||Math.floor([1])|||[1].floor()|||math.Floor([1])|||Math.floor([1])|||std::floor([1])|||Math.Floor([1])|||floor([1])|||kotlin.math.floor([1])||\lfloor [1] \rfloor
+☝️|||math_ceil|||Ceiling Rounding (Up)|||math.ceil([1])|||Math.ceil([1])|||[1].ceil()|||math.Ceil([1])|||Math.ceil([1])|||std::ceil([1])|||Math.Ceiling([1])|||ceil([1])|||kotlin.math.ceil([1])||\lceil [1] \rceil
+# ==========================================
+# SECTION 75 : Geometric Constants & Tangents
+# ==========================================
+🥧|||math_pi|||Archimedes' Constant Pi|||math.pi|||Math.PI|||std::f64::consts::PI|||math.Pi|||Math.PI|||std::numbers::pi|||Math.PI|||Double.pi|||kotlin.math.PI||\pi
+📐|||math_tan|||Trigonometric Tangent|||math.tan([1])|||Math.tan([1])|||[1].tan()|||math.Tan([1])|||Math.tan([1])|||std::tan([1])|||Math.Tan([1])|||tan([1])|||kotlin.math.tan([1])||\tan([1])
+# ==========================================
+# SECTION 76 : Pseudorandom Generation
+# ==========================================
+🎲|||math_random|||Random Float (0 to 1)|||random.random()|||Math.random()|||rand::random::<f64>()|||rand.Float64()|||Math.random()|||/* non-standard */|||new Random().NextDouble()|||Double.random(in: 0...1)|||Math.random()||\text{rand}()
+# ==========================================
+# SECTION 77 : Advanced String Suffixes
+# ==========================================
+⏫|||str_ends_with|||Check String Suffix|||[1].endswith([2])|||[1].endsWith([2])|||[1].ends_with([2])|||strings.HasSuffix([1], [2])|||[1].endsWith([2])|||[1].ends_with([2])|||[1].EndsWith([2])|||[1].hasSuffix([2])|||[1].endsWith([2])||\text{ends\_with}([1], [2])
+# ==========================================
+# SECTION 78 : Set Operations & Insertion
+# ==========================================
+🎨|||set_init|||Set Initialization|||set([1])|||new Set([1])|||std::collections::HashSet::from([1])|||/* manual map */|||new HashSet<>(Arrays.asList([1]))|||std::set<any>{[1]}|||new HashSet<any>{[1]}|||Set([1])|||hashSetOf([1])||\{[1]\}
+➕|||set_add|||Add Element to Set|||[1].add([2])|||[1].add([2])|||[1].insert([2])|||[1][[2]] = true|||[1].add([2])|||[1].insert([2])|||[1].Add([2])|||[1].insert([2])|||[1].add([2])|||[1] \cup \{[2]\}
+# ==========================================
+# SECTION 79 : Advanced Set Algebra
+# ==========================================
+🤝|||set_union|||Set Union Algebra|||[1].union([2])|||new Set([...[1], ...[2]])|||[1].union(&[2])|||/* manual loop */|||/* addAll */|||/* std::set_union */|||/* UnionWith */|||[1].union([2])|||[1].union([2])|||[1] \cup [2]
+🔀|||set_intersect|||Set Intersection Algebra|||[1].intersection([2])|||new Set([...[1]].filter(x => [2].has(x)))|||[1].intersection(&[2])|||/* manual loop */|||/* retainAll */|||/* std::set_intersection */|||/* IntersectWith */|||[1].intersection([2])|||[1].intersect([2])|||[1] \cap [2]
+# ==========================================
+# SECTION 80 : File System Diagnostics & Removals
+# ==========================================
+🔍|||file_exists|||Check File Existence|||os.path.exists([1])|||fs.existsSync([1])|||std::path::Path::new([1]).exists()|||_, err := os.Stat([1]); !os.IsNotExist(err)|||Files.exists(Path.of([1]))|||std::filesystem::exists([1])|||File.Exists([1])|||FileManager.default.fileExists(atPath: [1])|||File([1]).exists()||\text{exists}([1])
+🗑️|||file_delete|||Delete File from Disk|||os.remove([1])|||fs.unlinkSync([1])|||std::fs::remove_file([1])|||os.Remove([1])|||Files.delete(Path.of([1]))|||std::filesystem::remove([1])|||File.Delete([1])|||try? FileManager.default.removeItem(atPath: [1])|||File([1]).delete()||\text{delete}([1])
+# ==========================================
+# SECTION 81 : Execution Delays & Pauses
+# ==========================================
+⏳|||sys_sleep|||Execution Delay (Seconds)|||time.sleep([1])|||await new Promise(r => setTimeout(r, [1]*1000))|||std::thread::sleep(std::time::Duration::from_secs([1]))|||time.Sleep([1] * time.Second)|||Thread.sleep([1]*1000)|||std::this_thread::sleep_for(std::chrono::seconds([1]))|||Thread.Sleep([1]*1000)|||try? await Task.sleep(nanoseconds: UInt64([1] * 1_000_000_000))|||Thread.sleep([1]*1000L)||\text{sleep}([1])
+# ==========================================
+# SECTION 82 : Environment Variables
+# ==========================================
+⚙️|||sys_getenv|||Get Environment Variable|||os.getenv([1])|||process.env[[1]]|||std::env::var([1]).unwrap()|||os.Getenv([1])|||System.getenv([1])|||std::getenv([1])|||Environment.GetEnvironmentVariable([1])|||ProcessInfo.processInfo.environment[[1]]|||System.getenv([1])||\text{getenv}([1])
+# ==========================================
+# SECTION 83 : File System I/O (Read/Write)
+# ==========================================
+📖|||file_read|||Read Entire File to String|||open([1]).read()|||fs.readFileSync([1], 'utf8')|||std::fs::read_to_string([1]).unwrap()|||res, _ := os.ReadFile([1])|||Files.readString(Path.of([1]))|||/* manual ifstream */|||File.ReadAllText([1])|||try? String(contentsOfFile: [1])|||File([1]).readText()||\text{read}([1])
+💾|||file_write|||Write String to File|||open([1], 'w').write([2])|||fs.writeFileSync([1], [2])|||std::fs::write([1], [2]).unwrap()|||os.WriteFile([1], []byte([2]), 0644)|||Files.writeString(Path.of([1]), [2])|||/* manual ofstream */|||File.WriteAllText([1], [2])|||try? [2].write(toFile: [1], atomically: true, encoding: .utf8)|||File([1]).writeText([2])||\text{write}([1], [2])
+# ==========================================
+# SECTION 84 : JSON Serialization & Parsing
+# ==========================================
+ String|||json.dumps([1])|||JSON.stringify([1])|||serde_json::to_string(&[1]).unwrap()|||res, _ := json.Marshal([1])|||/* library dependent */|||/* library dependent */|||JsonSerializer.Serialize([1])|||try? String(data: JSONEncoder().encode([1]), encoding: .utf8)|||Json.encodeToString([1])||\text{json}([1])
+🔌|||json_parse|||Parse JSON String to Object|||json.loads([1])|||JSON.parse([1])|||serde_json::from_str(&[1]).unwrap()|||json.Unmarshal([]byte([1]), &[2])|||/* library dependent */|||/* library dependent */|||JsonSerializer.Deserialize<T>([1])|||try? JSONDecoder().decode(T.self, from: Data([1].utf8))|||Json.decodeFromString([1])||\text{parse}([1])
+# ==========================================
+# SECTION 85 : Network HTTP GET
+# ==========================================
+🌐|||http_get|||HTTP GET Request to URL|||requests.get([1]).text|||await (await fetch([1])).text()|||reqwest::get([1]).await.unwrap().text().await.unwrap()|||/* manual http.Get */|||HttpClient.newHttpClient().send(HttpRequest.newBuilder().uri(URI.create([1])).GET().build(), HttpResponse.BodyHandlers.ofString()).body()|||/* non-standard */|||await new HttpClient().GetStringAsync([1])|||/* manual URLSession */|||/* manual URL().readText() */||\text{get}([1])
+# ==========================================
+# SECTION 86 : Bitwise Logical Operations
+# ==========================================
+&|||bitwise_and|||Bitwise AND Operation|||[1] & [2]|||[1] & [2]|||[1] & [2]|||[1] & [2]|||[1] & [2]|||[1] & [2]|||[1] & [2]|||[1] & [2]|||[1] and [2]|||[1] \wedge [2]
+| |||bitwise_or|||Bitwise OR Operation|||[1] | [2]|||[1] | [2]|||[1] | [2]|||[1] | [2]|||[1] | [2]|||[1] | [2]|||[1] | [2]|||[1] | [2]|||[1] or [2]|||[1] \vee [2]
+^|||bitwise_xor|||Bitwise XOR Operation|||[1] ^ [2]|||[1] ^ [2]|||[1] ^ [2]|||[1] ^ [2]|||[1] ^ [2]|||[1] ^ [2]|||[1] ^ [2]|||[1] ^ [2]|||[1] xor [2]|||[1] \oplus [2]
+# ==========================================
+# SECTION 87 : Power, Absolute & Remainder
+# ==========================================
+🔢|||math_abs|||Absolute Value|||abs([1])|||Math.abs([1])|||[1].abs()|||math.Abs([1])|||Math.abs([1])|||std::abs([1])|||Math.Abs([1])|||abs([1])|||kotlin.math.abs([1])||| |[1]|
+🔋|||math_pow|||Raise Base to Power|||[1] ** [2]|||Math.pow([1], [2])|||[1].pow([2])|||math.Pow([1], [2])|||Math.pow([1], [2])|||std::pow([1], [2])|||Math.Pow([1], [2])|||pow([1], [2])|||[1].pow([2])|||[1]^{[2]}
+🛑|||math_mod|||Modulo Remainder|||[1] % [2]|||[1] % [2]|||[1] % [2]|||[1] % [2]|||[1] % [2]|||[1] % [2]|||[1] % [2]|||[1] % [2]|||[1] % [2]|||[1] \pmod{[2]}
+# ==========================================
+# SECTION 88 : Dictionary & Map Mutations
+# ==========================================
+🗂️|||map_init|||Map / Dictionary Initialization|||dict()|||new Map()|||std::collections::HashMap::new()|||make(map[string]any)|||new HashMap<>()|||std::map<any, any>()|||new Dictionary<any, any>()|||[Key: Value]()|||hashMapOf()||\text{map}()
+🔍|||map_contains|||Check Key Existence|||[2] in [1]|||[1].has([2])|||[1].contains_key(&[2])|||_, ok := [1][[2]]|||[1].containsKey([2])|||[1].find([2]) != [1].end()|||[1].ContainsKey([2])|||[1][[2]] != nil|||[1].containsKey([2])|||[2] \in \text{dom}([1])
+🗑️|||map_remove|||Remove Key-Value Pair|||del [1][[2]]|||[1].delete([2])|||[1].remove(&[2])|||delete([1], [2])|||[1].remove([2])|||[1].erase([2])|||[1].Remove([2])|||[1].removeValue(forKey: [2])|||[1].remove([2])|||[1] \setminus \{[2]\}
+# ==========================================
+# SECTION 89 : Process Lifecycle & Diagnostics
+# ==========================================
+🚪|||sys_exit|||Terminate Current Process|||sys.exit([1])|||process.exit([1])|||std::process::exit([1])|||os.Exit([1])|||System.exit([1])|||std::exit([1])|||Environment.Exit([1])|||exit([1])|||System.exit([1])||\text{exit}([1])
+🆔|||sys_pid|||Get Current Process ID|||os.getpid()|||process.pid|||std::process::id()|||os.Getpid()|||ProcessHandle.current().pid()|||getpid()|||Environment.ProcessId|||getpid()|||ProcessHandle.current().pid()||\text{pid}
+# ==========================================
+# SECTION 90 : Regular Expression Matching
+# ==========================================
+🎯|||regex_match|||Evaluate Regex Match|||bool(re.search([1], [2]))|||[1].test([2])|||regex::Regex::new([1]).unwrap().is_match([2])|||regexp.MustCompile([1]).MatchString([2])|||Pattern.matches([1], [2])|||std::regex_search([2], std::regex([1]))|||Regex.IsMatch([2], [1])|||[2].range(of: [1], options: .regularExpression) != nil|||Regex([1]).containsMatchIn([2])||\text{match}([1], [2])
+# ==========================================
+# SECTION 91 : Cryptographic Digesting
+# ==========================================
+🔒|||crypto_sha256|||SHA-256 Checksum Hex|||hashlib.sha256([1].encode()).hexdigest()|||/* WebCrypto API subtle */|||/* sha2 crate */|||fmt.Sprintf("%x", sha256.Sum256([]byte([1])))|||/* MessageDigest */|||/* non-standard */|||BitConverter.ToString(SHA256.HashData(Encoding.UTF8.GetBytes([1])))|||/* CryptoKit */|||/* MessageDigest */||\text{sha256}([1])
+# ==========================================
+# SECTION 92 : Advanced Math (Root & Log)
+# ==========================================
+🧮|||math_sqrt|||Square Root|||math.sqrt([1])|||Math.sqrt([1])|||[1].sqrt()|||math.Sqrt([1])|||Math.sqrt([1])|||std::sqrt([1])|||Math.Sqrt([1])|||sqrt([1])|||kotlin.math.sqrt([1])|||\sqrt{[1]}
+🪵|||math_log|||Natural Logarithm|||math.log([1])|||Math.log([1])|||[1].ln()|||math.Log([1])|||Math.log([1])|||std::log([1])|||Math.Log([1])|||log([1])|||kotlin.math.log([1])|||\ln([1])
+# ==========================================
+# SECTION 93 : String Padding
+# ==========================================
+↔️|||str_pad_left|||Pad String Left|||[1].rjust([2], [3])|||[1].padStart([2], [3])|||/* manual format */|||/* manual */|||String.format("%" + [2] + "s", [1]).replace(' ', [3][0])|||/* manual */|||[1].PadLeft([2], [3][0])|||[1].padding(toLength: [2], withPad: [3], startingAt: 0)|||[1].padStart([2], [3][0])|||\text{padL}([1], [2], [3])
+# ==========================================
+# SECTION 94 : URL Percent Encoding
+# ==========================================
+🔗|||url_encode|||URL Percent Encode|||urllib.parse.quote([1])|||encodeURIComponent([1])|||/* external crate */|||url.QueryEscape([1])|||URLEncoder.encode([1], StandardCharsets.UTF_8)|||/* non-standard */|||Uri.EscapeDataString([1])|||[1].addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)|||URLEncoder.encode([1], "UTF-8")||\text{urlEnc}([1])
+🔓|||url_decode|||URL Percent Decode|||urllib.parse.unquote([1])|||decodeURIComponent([1])|||/* external crate */|||url.QueryUnescape([1])|||URLDecoder.decode([1], StandardCharsets.UTF_8)|||/* non-standard */|||Uri.UnescapeDataString([1])|||[1].removingPercentEncoding|||URLDecoder.decode([1], "UTF-8")||\text{urlDec}([1])
+# ==========================================
+# SECTION 95 : Type Inspection
+# ==========================================
+🏷️|||sys_type|||Get Object Type Name|||type([1]).__name__|||typeof [1]|||std::any::type_name::<T>()|||fmt.Sprintf("%T", [1])|||[1].getClass().getName()|||typeid([1]).name()|||[1].GetType().Name|||String(describing: type(of: [1]))|||[1]::class.simpleName||\text{type}([1])
+# ==========================================
+# SECTION 96 : Array Predicates (Quantifiers)
+# ==========================================
+✅|||list_all|||Check All Match Predicate|||all([1](x) for x in [2])|||[2].every([1])|||[2].iter().all([1])|||/* manual loop */|||[2].stream().allMatch([1])|||std::all_of([2].begin(), [2].end(), [1])|||[2].All([1])|||[2].allSatisfy([1])|||[2].all([1])||\forall x \in [2], [1](x)
+👁️|||list_any|||Check Any Match Predicate|||any([1](x) for x in [2])|||[2].some([1])|||[2].iter().any([1])|||/* manual loop */|||[2].stream().anyMatch([1])|||std::any_of([2].begin(), [2].end(), [1])|||[2].Any([1])|||[2].contains(where: [1])|||[2].any([1])||\exists x \in [2], [1](x)
+# ==========================================
+# SECTION 97 : String Trimming & Cleaning
+# ==========================================
+🧹|||str_trim|||Strip Leading & Trailing Whitespace|||[1].strip()|||[1].trim()|||[1].trim()|||strings.TrimSpace([1])|||[1].strip()|||/* manual */|||[1].Trim()|||[1].trimmingCharacters(in: .whitespacesAndNewlines)|||[1].trim()||\text{trim}([1])
+# ==========================================
+# SECTION 98 : Substring Positioning
+# ==========================================
+🔍|||str_index_of|||Find Substring First Index|||[1].find([2])|||[1].indexOf([2])|||[1].find([2])|||strings.Index([1], [2])|||[1].indexOf([2])|||[1].find([2])|||[1].IndexOf([2])|||[1].range(of: [2])?.lowerBound|||[1].indexOf([2])||\text{index}([1], [2])
+# ==========================================
+# SECTION 99 : Data Type Casting & Parsing
+# ==========================================
+🔢|||str_to_int|||Parse String to Integer|||int([1])|||parseInt([1], 10)|||[1].parse::<i32>().unwrap()|||strconv.Atoi([1])|||Integer.parseInt([1])|||std::stoi([1])|||int.Parse([1])|||Int([1])|||[1].toInt()||\text{int}([1])
+🔤|||int_to_str|||Convert Integer to String|||str([1])|||String([1])|||[1].to_string()|||strconv.Itoa([1])|||String.valueOf([1])|||std::to_string([1])|||[1].ToString()|||String([1])|||[1].toString()||\text{str}([1])
+# ==========================================
+# SECTION 100 : Nearest Integer Rounding & Signs
+# ==========================================
+🎯|||math_round|||Round to Nearest Integer|||round([1])|||Math.round([1])|||[1].round()|||math.Round([1])|||Math.round([1])|||std::round([1])|||Math.Round([1])|||round([1])|||kotlin.math.round([1])||\text{round}([1])
+↕️|||math_sign|||Get Sign of Number (-1, 0, 1)|||( [1] > 0 ) - ( [1] < 0 )|||Math.sign([1])|||[1].signum()|||/* manual comparison */|||Math.signum([1])|||/* manual */|||Math.Sign([1])|||[1].signum()|||kotlin.math.sign([1])||\text{sgn}([1])
+# ==========================================
+# SECTION 101 : Case Transformations
+# ==========================================
+⬇️|||str_to_lower|||Convert String to Lowercase|||[1].lower()|||[1].toLowerCase()|||[1].to_lowercase()|||strings.ToLower([1])|||[1].toLowerCase()|||/* manual loop */|||[1].ToLower()|||[1].lowercased()|||[1].lowercase()||\text{lower}([1])
+⬆️|||str_to_upper|||Convert String to Uppercase|||[1].upper()|||[1].toUpperCase()|||[1].to_uppercase()|||strings.ToUpper([1])|||[1].toUpperCase()|||/* manual loop */|||[1].ToUpper()|||[1].uppercased()|||[1].uppercase()||\text{upper}([1])
+# ==========================================
+# SECTION 102 : Collection Sorting
+# ==========================================
+🔀|||list_sort|||Sort List/Array in Place|||[1].sort()|||[1].sort()|||[1].sort()|||sort.Slice([1], func(i, j int) bool { return [1][i] < [1][j] })|||Collections.sort([1])|||std::sort([1].begin(), [1].end())|||[1].Sort()|||[1].sort()|||[1].sort()||\text{sort}([1])
+# ==========================================
+# SECTION 103 : Collection Reversal
+# ==========================================
+🔄|||list_reverse|||Reverse List/Array Order|||[1].reverse()|||[1].reverse()|||[1].reverse()|||/* manual loop swap */|||Collections.reverse([1])|||std::reverse([1].begin(), [1].end())|||[1].Reverse()|||[1].reverse()|||[1].reverse()||\text{reverse}([1])
+# ==========================================
+# SECTION 104 : Hexadecimal Representation
+# ==========================================
+⌗|||int_to_hex|||Convert Integer to Hex String|||hex([1])|||[1].toString(16)|||format!("{:x}", [1])|||fmt.Sprintf("%x", [1])|||Integer.toHexString([1])|||/* std::hex stream */|||[1].ToString("x")|||String([1], radix: 16)|||[1].toString(16)||\text{hex}([1])
+# ==========================================
+# SECTION 105 : Exception & Error Throwing
+# ==========================================
+💥|||sys_error_throw|||Raise / Throw Runtime Exception|||raise Exception([1])|||throw new Error([1])|||panic!([1])|||panic([1])|||throw new Exception([1])|||throw std::runtime_error([1])|||throw new Exception([1])|||throw [1]|||throw Exception([1])||\text{throw}([1])
+# ==========================================
+# SECTION 106 : System Platform Diagnostics
+# ==========================================
+💻|||sys_os_name|||Get Target Operating System Name|||platform.system()|||process.platform|||std::env::consts::OS|||runtime.GOOS|||System.getProperty("os.name")|||/* macro dependent */|||Environment.OSVersion.Platform.ToString()|||/* #if os(...) */|||System.getProperty("os.name")||\text{os}
+# ==========================================
+# SECTION 107 : Logarithmic & Exponential Constants
+# ==========================================
+📈|||math_e|||Euler's Constant e|||math.e|||Math.E|||std::f64::consts::E|||math.E|||Math.E|||std::numbers::e|||Math.E|||Darwin.M_E|||kotlin.math.E|||e
+# ==========================================
+# SECTION 108 : String Duplication & Indexing
+# ==========================================
+🔁|||str_repeat|||Repeat String N Times|||[1] * [2]|||[1].repeat([2])|||[1].repeat([2])|||strings.Repeat([1], [2])|||[1].repeat([2])|||/* manual loop/string constructor */|||string.Concat(Enumerable.Repeat([1], [2]))|||String(repeating: [1], count: [2])|||[1].repeat([2])||\text{repeat}([1], [2])
+🔤|||str_char_at|||Get Character at Index|||[1][[2]]|||[1].charAt([2])|||[1].chars().nth([2]).unwrap()|||[]rune([1])[[2]]|||[1].charAt([2])|||[1][[2]]|||[1][[2]]|||[1][[1].index([1].startIndex, offsetBy: [2])]|||[1][[2]]||\text{charAt}([1], [2])
+# ==========================================
+# SECTION 109 : Array Slicing & Merging
+# ==========================================
+✂️|||list_slice|||Extract Sublist / Slice|||[1][[2]:[3]]|||[1].slice([2], [3])|||&[1][[2]..[3]]|||[1][[2]:[3]]|||[1].subList([2], [3])|||std::vector<any>([1].begin()+[2], [1].begin()+[3])|||[1].GetRange([2], [3]-[2])|||Array([1][[2]..<[3]])|||[1].subList([2], [3])||\text{slice}([1], [2], [3])
+🔗|||list_concat|||Concatenate Two Lists|||[1] + [2]|||[1].concat([2])|||[[1], [2]].concat()|||append([1], [2]...)|||/* list1.addAll(list2) */|||[1].insert([1].end(), [2].begin(), [2].end())|||[1].Concat([2]).ToList()|||[1] + [2]|||[1] + [2]||\text{concat}([1], [2])
+# ==========================================
+# SECTION 110 : Command Line Arguments
+# ==========================================
+📥|||sys_args|||Get Command Line Arguments|||sys.argv|||process.argv|||std::env::args().collect::<Vec<_>>()|||os.Args|||/* main(String[] args) */|||/* main(int argc, char** argv) */|||Environment.GetCommandLineArgs()|||CommandLine.arguments|||/* main(args: Array<String>) */||\text{args}
+# ==========================================
+# SECTION 111 : Inverse Trigonometric Coordinates
+# ==========================================
+📐|||math_atan2|||Arc Tangent of y/x Coordinates|||math.atan2([1], [2])|||Math.atan2([1], [2])|||[1].atan2([2])|||math.Atan2([1], [2])|||Math.atan2([1], [2])|||std::atan2([1], [2])|||Math.Atan2([1], [2])|||atan2([1], [2])|||kotlin.math.atan2([1], [2])||\text{atan2}([1], [2])
+📁|||fs_read_text|||Read Text File Entirely|||open([1], 'r').read()|||fs.readFileSync([1], 'utf8')|||std::fs::read_to_string([1]).unwrap()|||os.ReadFile([1])|||Files.readString(Paths.get([1]))|||std::ifstream([1])|||File.ReadAllText([1])|||try String(contentsOfFile: [1])|||File([1]).readText()||\text{read}([1])
+💾|||fs_write_text|||Write Text File Entirely|||open([1], 'w').write([2])|||fs.writeFileSync([1], [2])|||std::fs::write([1], [2]).unwrap()|||os.WriteFile([1], []byte([2]), 0644)|||Files.writeString(Paths.get([1]), [2])|||std::ofstream([1]) << [2]|||File.WriteAllText([1], [2])|||try [2].write(toFile: [1], atomically: true)|||File([1]).writeText([2])||\text{write}([1], [2])
+🔎|||fs_exists|||Check File Existence|||os.path.exists([1])|||fs.existsSync([1])|||std::path::Path::new([1]).exists()|||_, err := os.Stat([1]); !os.IsNotExist(err)|||Files.exists(Paths.get([1]))|||std::filesystem::exists([1])|||File.Exists([1])|||FileManager.default.fileExists(atPath: [1])|||File([1]).exists()||\text{exists}([1])
+📦|||json_stringify|||Serialize Object to JSON|||json.dumps([1])|||JSON.stringify([1])|||serde_json::to_string(&[1]).unwrap()|||json.Marshal([1])|||new ObjectMapper().writeValueAsString([1])|||/* nlohmann/json */ [1].dump()|||JsonSerializer.Serialize([1])|||try JSONEncoder().encode([1])|||Json.encodeToString([1])||\text{json}([1])
+🔓|||json_parse|||Deserialize JSON to Object|||json.loads([1])|||JSON.parse([1])|||serde_json::from_str([1]).unwrap()|||json.Unmarshal([]byte([1]), &[2])|||new ObjectMapper().readValue([1], Class.class)|||/* nlohmann/json */ json::parse([1])|||JsonSerializer.Deserialize<T>([1])|||try JSONDecoder().decode(T.self, from: [1])|||Json.decodeFromString([1])||\text{parse}([1])
+⏰|||time_epoch|||Get Current Epoch Timestamp|||int(time.time())|||Date.now()|||std::time::SystemTime::now().duration_since(std::time::UNIX_EPOCH).unwrap().as_secs()|||time.Now().Unix()|||System.currentTimeMillis()|||std::time(nullptr)|||DateTimeOffset.UtcNow.ToUnixTimeSeconds()|||Date().timeIntervalSince1970|||System.currentTimeMillis()||\text{epoch}
+🌍|||sys_get_env|||Get Environment Variable Value|||os.environ.get([1])|||process.env[[1]]|||std::env::var([1]).unwrap()|||os.Getenv([1])|||System.getenv([1])|||std::getenv([1])|||Environment.GetEnvironmentVariable([1])|||ProcessInfo.processInfo.environment[[1]]|||System.getenv([1])||\text{env}([1])
+⏳|||sys_sleep|||Pause Execution for N Milliseconds|||time.sleep([1] / 1000.0)|||await new Promise(r => setTimeout(r, [1]))|||std::thread::sleep(std::time::Duration::from_millis([1]))|||time.Sleep(time.Duration([1]) * time.Millisecond)|||Thread.sleep([1])|||std::this_thread::sleep_for(std::chrono::milliseconds([1]))|||Thread.Sleep([1])|||try await Task.sleep(nanoseconds: UInt64([1]) * 1_000_000)|||Thread.sleep([1].toLong())||\text{sleep}([1])
+🌐|||net_http_get|||Perform HTTP GET Request|||urllib.request.urlopen([1]).read().decode('utf-8')|||await (await fetch([1])).text()|||/* reqwest external */|||/* http.Get([1]) manual read */|||HttpClient.newHttpClient().send(HttpRequest.newBuilder().uri(URI.create([1])).build(), HttpResponse.BodyHandlers.ofString()).body()|||/* external cpprest/curl */|||await new HttpClient().GetStringAsync([1])|||/* URLSession manual async */|||URL([1]).readText()||\text{httpGet}([1])
+🔑|||crypto_sha256|||Compute SHA256 Hash of String|||hashlib.sha256([1].encode()).hexdigest()|||crypto.createHash('sha256').update([1]).digest('hex')|||/* sha2 external crate */|||/* crypto/sha256 Sum256 */|||HexFormat.of().formatHex(MessageDigest.getInstance("SHA-256").digest([1].getBytes(StandardCharsets.UTF_8)))|||/* external openssl/crypto */|||BitConverter.ToString(SHA256.Create().ComputeHash(Encoding.UTF8.GetBytes([1]))).Replace("-", "").ToLower()|||/* CryptoKit SHA256 */|||MessageDigest.getInstance("SHA-256").digest([1].toByteArray()).joinToString("") { "%02x".format(it) }||\text{sha256}([1])
+🆔|||sys_uuid|||Generate Random UUID Version 4|||str(uuid.uuid4())|||crypto.randomUUID()|||/* uuid external crate */|||/* google/uuid external */|||UUID.randomUUID().toString()|||/* non-standard / boost */|||Guid.NewGuid().ToString()|||UUID().uuidString|||UUID.randomUUID().toString()||\text{uuid}
+bitwise_and|||Bitwise AND Operations|||[1] & [2]|||[1] & [2]|||[1] & [2]|||[1] & [2]|||[1] & [2]|||[1] & [2]|||[1] & [2]|||[1] & [2]|||[1] and [2]||\left([1] \ \& \ [2]\right)
+|||bitwise_or|||Bitwise OR Operations|||[1] | [2]|||[1] | [2]|||[1] | [2]|||[1] | [2]|||[1] | [2]|||[1] | [2]|||[1] | [2]|||[1] | [2]|||[1] or [2]||\left([1] \ | \ [2]\right)
+|||bitwise_xor|||Bitwise XOR Operations|||[1] ^ [2]|||[1] ^ [2]|||[1] ^ [2]|||[1] ^ [2]|||[1] ^ [2]|||[1] ^ [2]|||[1] ^ [2]|||[1] ^ [2]|||[1] xor [2]||\left([1] \ \oplus \ [2]\right)
+◀️|||bitwise_shift_left|||Bitwise Left Shift|||[1] << [2]|||[1] << [2]|||[1] << [2]|||[1] << [2]|||[1] << [2]|||[1] << [2]|||[1] << [2]|||[1] << [2]|||[1] shl [2]||\left([1] \ll [2]\right)
+▶️|||bitwise_shift_right|||Bitwise Right Shift|||[1] >> [2]|||[1] >> [2]|||[1] >> [2]|||[1] >> [2]|||[1] >> [2]|||[1] >> [2]|||[1] >> [2]|||[1] >> [2]|||[1] shr [2]||\left([1] \gg [2]\right)
+🎯|||regex_match|||Check String Matches Regex Pattern|||bool(re.match([1], [2]))|||new RegExp([1]).test([2])|||Regex::new([1]).unwrap().is_match([2])|||regexp.MustCompile([1]).MatchString([2])|||[2].matches([1])|||std::regex_match([2], std::regex([1]))|||Regex.IsMatch([2], [1])|||[2].range(of: [1], options: .regularExpression) != nil|||Regex([1]).matches([2])||\text{regex}([1], [2])
+🔄|||regex_replace|||Replace Regex Matches in String|||re.sub([1], [2], [3])|||[3].replace(new RegExp([1], 'g'), [2])|||Regex::new([1]).unwrap().replace_all([3], [2]).to_string()|||regexp.MustCompile([1]).ReplaceAllString([3], [2])|||[3].replaceAll([1], [2])|||std::regex_replace([3], std::regex([1]), [2])|||Regex.Replace([3], [1], [2])|||[3].replacingOccurrences(of: [1], with: [2], options: .regularExpression)|||Regex([1]).replace([3], [2])||\text{regSub}([1], [2], [3])
+🔑|||map_keys|||Get List of Dictionary Keys|||list([1].keys())|||Object.keys([1])|||[1].keys().cloned().collect::<Vec<_>>()|||/* manual loop over map */|||new ArrayList<>([1].keySet())|||/* manual loop or custom view */|||[1].Keys.ToList()|||Array([1].keys)|||ArrayList([1].keys)||\text{keys}([1])
+💎|||map_values|||Get List of Dictionary Values|||list([1].values())|||Object.values([1])|||[1].values().cloned().collect::<Vec<_>>()|||/* manual loop over map */|||new ArrayList<>([1].values())|||/* manual loop or custom view */|||[1].Values.ToList()|||Array([1].values)|||ArrayList([1].values)||\text{values}([1])
+🧐|||map_contains|||Check Dictionary Has Key|||[2] in [1]|||[2] in [1]|||[1].contains_key(&[2])|||_, ok := [1][[2]]; ok|||[1].containsKey([2])|||[1].find([2]) != [1].end()|||[1].ContainsKey([2])|||[1][[2]] != nil|||[1].containsKey([2])||\text{hasKey}([1], [2])
+❌|||map_remove|||Remove Key from Dictionary|||del [1][[2]]|||delete [1][[2]]|||[1].remove(&[2])|||delete([1], [2])|||[1].remove([2])|||[1].erase([2])|||[1].Remove([2])|||[1].removeValue(forKey: [2])|||[1].remove([2])||\text{mapRemove}([1], [2])
+🧹|||map_clear|||Clear All Dictionary Entries|||[1].clear()|||for (let k in [1]) delete [1][k]|||[1].clear()|||for k := range [1] { delete([1], k) }|||[1].clear()|||[1].clear()|||[1].Clear()|||[1].removeAll()|||[1].clear()||\text{mapClear}([1])
+💥|||list_clear|||Clear All List Elements|||[1].clear()|||[1].length = 0|||[1].clear()|||[1] = [1][:0]|||[1].clear()|||[1].clear()|||[1].Clear()|||[1].removeAll()|||[1].clear()||\text{listClear}([1])
+✂️|||str_split|||Split String by Delimiter|||[1].split([2])|||[1].split([2])|||[1].split([2]).collect::<Vec<_>>()|||strings.Split([1], [2])|||[1].split([2])|||/* manual stringstream loop */|||[1].Split([2])|||[1].components(separatedBy: [2])|||[1].split([2])||\text{split}([1], [2])
+🔗|||str_join|||Join List of Strings with Delimiter|||[1].join([2])|||[2].join([1])|||[2].join([1])|||strings.Join([2], [1])|||String.join([1], [2])|||/* manual loop with delimiter */|||string.Join([1], [2])|||[2].joined(separator: [1])|||[2].joinToString([1])||\text{join}([1], [2])
+🚪|||sys_exit|||Terminate Process with Status Code|||sys.exit([1])|||process.exit([1])|||std::process::exit([1])|||os.Exit([1])|||System.exit([1])|||std::exit([1])|||Environment.Exit([1])|||exit([1])|||exitProcess([1])||\text{exit}([1])
+➕|||math_abs|||Absolute Value of Number|||abs([1])|||Math.abs([1])|||[1].abs()|||math.Abs([1])|||Math.abs([1])|||std::abs([1])|||Math.Abs([1])|||abs([1])|||kotlin.math.abs([1])||\left|[1]\right|
+📐|||math_sin|||Sine of Radians|||math.sin([1])|||Math.sin([1])|||[1].sin()|||math.Sin([1])|||Math.sin([1])|||std::sin([1])|||Math.Sin([1])|||sin([1])|||kotlin.math.sin([1])||\sin([1])
+📐|||math_cos|||Cosine of Radians|||math.cos([1])|||Math.cos([1])|||[1].cos()|||math.Cos([1])|||Math.cos([1])|||std::cos([1])|||Math.Cos([1])|||cos([1])|||kotlin.math.cos([1])||\cos([1])
+📉|||math_floor|||Floor of Number|||math.floor([1])|||Math.floor([1])|||[1].floor()|||math.Floor([1])|||Math.floor([1])|||std::floor([1])|||Math.Floor([1])|||floor([1])|||kotlin.math.floor([1])||\lfloor[1]\rfloor
+📈|||math_ceil|||Ceiling of Number|||math.ceil([1])|||Math.ceil([1])|||[1].ceil()|||math.Ceil([1])|||Math.ceil([1])|||std::ceil([1])|||Math.Quantify([1]) -> Math.Ceiling([1])|||ceil([1])|||kotlin.math.ceil([1])||\lceil[1]\rceil
+🎯|||math_round|||Round to Nearest Integer|||round([1])|||Math.round([1])|||[1].round()|||math.Round([1])|||Math.round([1])|||std::round([1])|||Math.Round([1])|||round([1])|||kotlin.math.round([1])||\text{round}([1])
+🧹|||str_trim|||Trim Whitespace From Ends|||[1].strip()|||[1].trim()|||[1].trim()|||strings.TrimSpace([1])|||[1].trim()|||/* manual std::string trim */|||[1].Trim()|||[1].trimmingCharacters(in: .whitespacesAndNewlines)|||[1].trim()||\text{trim}([1])
+🚨|||math_is_nan|||Check if Value is NaN|||math.isnan([1])|||Number.isNaN([1])|||[1].is_nan()|||math.IsNaN([1])|||Double.isNaN([1])|||std::isnan([1])|||double.IsNaN([1])|||[1].isNaN|||[1].isNaN()||\text{isNaN}([1])
+🔤|||str_to_lower|||Convert String to Lowercase|||[1].lower()|||[1].toLowerCase()|||[1].to_lowercase()|||strings.ToLower([1])|||[1].toLowerCase()|||/* std::transform tolower */|||[1].ToLower()|||[1].lowercased()|||[1].lowercase()||\text{lower}([1])
+🔤|||str_to_upper|||Convert String to Uppercase|||[1].upper()|||[1].toUpperCase()|||[1].to_uppercase()|||strings.ToUpper([1])|||[1].toUpperCase()|||/* std::transform toupper */|||[1].ToUpper()|||[1].uppercased()|||[1].uppercase()||\text{upper}([1])
+🔍|||str_contains|||Check if String Contains Substring|||[2] in [1]|||[1].includes([2])|||[1].contains([2])|||strings.Contains([1], [2])|||[1].contains([2])|||[1].find([2]) != std::string::npos|||[1].Contains([2])|||[1].contains([2])|||[1].contains([2])||\text{contains}([1], [2])
+📍|||str_index_of|||Find Substring First Index|||[1].find([2])|||[1].indexOf([2])|||[1].find([2]).map_or(-1, |i| i as i32)|||strings.Index([1], [2])|||[1].indexOf([2])|||[1].find([2])|||[1].IndexOf([2])|||[1].firstIndex(of: [2])|||[1].indexOf([2])||\text{indexOf}([1], [2])
+⏮️|||str_starts_with|||Check if String Starts With Prefix|||[1].startswith([2])|||[1].startsWith([2])|||[1].starts_with([2])|||strings.HasPrefix([1], [2])|||[1].startsWith([2])|||[1].starts_with([2])|||[1].StartsWith([2])|||[1].hasPrefix([2])|||[1].startsWith([2])||\text{startsWith}([1], [2])
+⏭️|||str_ends_with|||Check if String Ends With Suffix|||[1].endswith([2])|||[1].endsWith([2])|||[1].ends_with([2])|||strings.HasSuffix([1], [2])|||[1].endsWith([2])|||[1].ends_with([2])|||[1].EndsWith([2])|||[1].hasSuffix([2])|||[1].endsWith([2])||\text{endsWith}([1], [2])
+🔄|||str_replace|||Replace Substring Literal|||[1].replace([2], [3])|||[1].replaceAll([2], [3])|||[1].replace([2], [3])|||strings.ReplaceAll([1], [2], [3])|||[1].replace([2], [3])|||/* manual string replace loop */|||[1].Replace([2], [3])|||[1].replacingOccurrences(of: [2], with: [3])|||[1].replace([2], [3])||\text{replace}([1], [2], [3])
+📏|||list_len|||Get Total Number of Elements|||len([1])|||[1].length|||[1].len()|||len([1])|||[1].size()|||[1].size()|||[1].Count|||[1].count|||[1].size||\text{len}([1])
+📥|||list_append|||Add Element to End of List|||[1].append([2])|||[1].push([2])|||[1].push([2])|||[1] = append([1], [2])|||[1].add([2])|||[1].push_back([2])|||[1].Add([2])|||[1].append([2])|||[1].add([2])||\text{append}([1], [2])
+📤|||list_pop|||Remove and Return Last Element|||[1].pop()|||[1].pop()|||[1].pop()|||/* manual slice truncation */|||[1].remove([1].size() - 1)|||[1].pop_back()|||/* manual index removal */|||[1].popLast()|||[1].removeAt([1].lastIndex)||\text{pop}([1])
+📥|||list_insert|||Insert Element at Specific Index|||[1].insert([2], [3])|||[1].splice([2], 0, [3])|||[1].insert([2], [3])|||/* manual slice split and merge */|||[1].add([2], [3])|||[1].insert([1].begin() + [2], [3])|||[1].Insert([2], [3])|||[1].insert([3], at: [2])|||[1].add([2], [3])||\text{insert}([1], [2], [3])
+🔍|||list_contains|||Check if List Contains Element|||[2] in [1]|||[1].includes([2])|||[1].contains(&[2])|||/* manual loop comparison */|||[1].contains([2])|||std::find([1].begin(), [1].end(), [2]) != [1].end()|||[1].Contains([2])|||[1].contains([2])|||[1].contains([2])||\text{listContains}([1], [2])
+⚖️|||math_min|||Minimum of Two Numbers|||min([1], [2])|||Math.min([1], [2])|||[1].min([2])|||math.Min([1], [2])|||Math.min([1], [2])|||std::min([1], [2])|||Math.Min([1], [2])|||min([1], [2])|||kotlin.math.min([1], [2])||\min\left([1], [2]\right)
+⚖️|||math_max|||Maximum of Two Numbers|||max([1], [2])|||Math.max([1], [2])|||[1].max([2])|||math.Max([1], [2])|||Math.max([1], [2])|||std::max([1], [2])|||Math.Max([1], [2])|||max([1], [2])|||kotlin.math.max([1], [2])||\max\left([1], [2]\right)
+⚡|||math_pow|||Raise Number to Power|||[1] ** [2]|||Math.pow([1], [2])|||[1].powf([2])|||math.Pow([1], [2])|||Math.pow([1], [2])|||std::pow([1], [2])|||Math.Pow([1], [2])|||pow([1], [2])|||[1].pow([2])|||[1]^{[2]}
+📐|||math_sqrt|||Square Root of Number|||math.sqrt([1])|||Math.sqrt([1])|||[1].sqrt()|||math.Sqrt([1])|||Math.sqrt([1])|||std::sqrt([1])|||Math.Sqrt([1])|||sqrt([1])|||kotlin.math.sqrt([1])||\sqrt{[1]}
+📐|||math_log|||Natural Logarithm (Base e)|||math.log([1])|||Math.log([1])|||[1].ln()|||math.Log([1])|||Math.log([1])|||std::log([1])|||Math.Log([1])|||log([1])|||kotlin.math.ln([1])||\ln([1])
+📈|||math_exp|||Exponential Function e^x|||math.exp([1])|||Math.exp([1])|||[1].exp()|||math.Exp([1])|||Math.exp([1])|||std::exp([1])|||Math.Exp([1])|||exp([1])|||kotlin.math.exp([1])||e^{[1]}
+📐|||math_tan|||Tangent of Radians|||math.tan([1])|||Math.tan([1])|||[1].tan()|||math.Tan([1])|||Math.tan([1])|||std::tan([1])|||Math.Tan([1])|||tan([1])|||kotlin.math.tan([1])||\tan([1])
+🔀|||list_sort|||Sort List In Place Ascending|||[1].sort()|||[1].sort((a, b) => a - b)|||[1].sort()|||sort.Slice([1], func(i, j int) bool { return [1][i] < [1][j] })|||Collections.sort([1])|||std::sort([1].begin(), [1].end())|||[1].Sort()|||[1].sort()|||[1].sort()||\text{sort}([1])
+🔄|||list_reverse|||Reverse List In Place|||[1].reverse()|||[1].reverse()|||[1].reverse()|||/* manual loop swap */|||Collections.reverse([1])|||std::reverse([1].begin(), [1].end())|||[1].Reverse()|||[1].reverse()|||[1].reverse()||\text{reverse}([1])
+✂️|||list_slice|||Extract Sublist From Index to Index|||[1][[2]:[3]]|||[1].slice([2], [3])|||[1][[2]..[3]].to_vec()|||[1][[2]:[3]]|||[1].subList([2], [3])|||std::vector<T>([1].begin() + [2], [1].begin() + [3])|||[1].GetRange([2], [3] - [2])|||Array([1][[2]..<[3]])|||[1].subList([2], [3])||\text{slice}([1], [2], [3])
+🎲|||rand_int|||Random Integer Between Min and Max|||random.randint([1], [2])|||Math.floor(Math.random() * ([2] - [1] + 1)) + [1]|||rand::thread_rng().gen_range([1]..=[2])|||rand.Intn([2] - [1] + 1) + [1]|||ThreadLocalRandom.current().nextInt([1], [2] + 1)|||[1] + rand() % ([2] - [1] + 1)|||new Random().Next([1], [2] + 1)|||Int.random(in: [1]...[2])|||([1]..[2]).random()||\text{randInt}([1], [2])
+🎲|||rand_float|||Random Float Between 0 and 1|||random.random()|||Math.random()|||rand::random::<f64>()|||rand.Float64()|||ThreadLocalRandom.current().nextDouble()|||(double)rand() / RAND_MAX|||new Random().NextDouble()|||Double.random(in: 0..<1)|||Random.nextDouble()||\text{randFloat}
+🔢|||type_cast_int|||Parse String to Integer|||int([1])|||parseInt([1])|||[1].parse::<i32>().unwrap()|||strconv.Atoi([1])|||Integer.parseInt([1])|||std::stoi([1])|||int.Parse([1])|||Int([1])|||[1].toInt()||\text{toInt}([1])
+🔢|||type_cast_float|||Parse String to Float|||float([1])|||parseFloat([1])|||[1].parse::<f64>().unwrap()|||strconv.ParseFloat([1], 64)|||Double.parseDouble([1])|||std::stod([1])|||double.Parse([1])|||Double([1])|||[1].toDouble()||\text{toFloat}([1])
+🔤|||type_cast_str|||Convert Value to String|||str([1])|||String([1])|||[1].to_string()|||fmt.Sprint([1])|||String.valueOf([1])|||std::to_string([1])|||[1].ToString()|||String([1])|||[1].toString()||\text{toStr}([1])
+📝|||str_fmt|||Format String with Variables|||f"{[1]} {[2]}"|||`${\[1]} ${\[2]}`|||format!("{} {}", [1], [2])|||fmt.Sprintf("%v %v", [1], [2])|||String.format("%s %s", [1], [2])|||std::format("{} {}", [1], [2])|||$"{[1]} {[2]}"|||"\( [1] ) \( [2] )"|||"${[1]} ${[2]}"||\text{fmt}([1], [2])
+🥧|||math_pi|||Mathematical Constant PI|||math.pi|||Math.PI|||std::f64::consts::PI|||math.Pi|||Math.PI|||std::numbers::pi|||Math.PI|||Double.pi|||kotlin.math.PI||\pi
+🧪|||math_e|||Mathematical Constant E|||math.e|||Math.E|||std::f64::consts::E|||math.E|||Math.E|||std::numbers::e|||Math.E|||M_E|||kotlin.math.E||e
+📍|||list_index_of|||Find Element First Index in List|||[1].index([2])|||[1].indexOf([2])|||[1].iter().position(|x| x == &[2]).map_or(-1, |i| i as i32)|||/* manual loop */|||[1].indexOf([2])|||std::distance([1].begin(), std::find([1].begin(), [1].end(), [2]))|||[1].IndexOf([2])|||[1].firstIndex(of: [2])|||[1].indexOf([2])||\text{listIndexOf}([1], [2])
+🗑️|||list_remove_at|||Remove Element at Specific Index|||[1].pop([2])|||[1].splice([2], 1)|||[1].remove([2])|||append([1][: [2]], [1][[2]+1:]...)|||[1].remove([2])|||[1].erase([1].begin() + [2])|||[1].RemoveAt([2])|||[1].remove(at: [2])|||[1].removeAt([2])||\text{removeAt}([1], [2])
+🧮|||matrix_mul|||Matrix Multiplication (A x B)|||np.dot([1], [2])|||/* manual 3-loop or math.js */|||/* nalgebra crate A * B */|||/* gonum/mat Mul(A, B) */|||/* EJML / Apache Commons */|||/* Eigen library A * B */|||/* MathNet.Numerics A * B */|||/* Accelerate cblas_dgemm */|||/* KMath Matrix.dot */|||[1] \cdot [2]
+🔄|||matrix_transpose|||Matrix Transpose (A^T)|||[1].T|||/* manual row/col swap */|||[1].transpose()|||[1].T()|||[1].transpose()|||[1].transpose()|||[1].Transpose()|||[1].transpose()|||[1].transpose()|||[1]^{T}
+📐|||matrix_det|||Determinant of Matrix|||np.linalg.det([1])|||/* math.js det(A) */|||[1].determinant()|||mat.Det([1])|||[1].determinant()|||[1].determinant()|||[1].Determinant()|||/* Accelerate det */|||[1].det()||\det([1])
+🔀|||matrix_inv|||Inverse of Matrix (A^-1)|||np.linalg.inv([1])|||/* math.js inv(A) */|||[1].try_inverse()|||/* gonum Inverse */|||[1].invert()|||[1].inverse()|||[1].Inverse()|||/* Accelerate inv */|||[1].inv()|||[1]^{-1}
+🌊|||math_fft|||Fast Fourier Transform (1D FFT)|||np.fft.fft([1])|||/* dsp-fft / fft.js */|||/* rustfft crate */|||/* gonum/dsp/fourier */|||/* JTransforms 1D */|||/* FFTW library */|||/* MathNet.Numerics FFT */|||/* vDSP_FFT */|||/* KMath FFT */||\mathcal{F}\{[1]\}
+♾️|||math_big_int|||Arbitrary Precision Big Integer|||int([1])|||BigInt([1])|||num_bigint::BigInt::from_str([1])|||new(big.Int).SetString([1], 10)|||new BigInteger([1])|||/* GMP library mpz_t */|||BigInteger.Parse([1])|||/* Bignum / CryptoKit */|||BigInteger([1])||\text{BigInt}([1])
+🔹|||vector_dot|||Dot Product of Two Vectors|||np.dot([1], [2])|||/* math.js dot([1], [2]) */|||[1].dot(&[2])|||mat.Dot([1], [2])|||/* EJML dot */|||[1].dot([2])|||/* MathNet dot */|||simd_dot([1], [2])|||/* KMath dot */||\mathbf{[1]} \cdot \mathbf{[2]}
+❌|||vector_cross|||Cross Product of 3D Vectors|||np.cross([1], [2])|||/* math.js cross([1], [2]) */|||[1].cross(&[2])|||/* manual / external */|||/* manual / external */|||[1].cross([2])|||/* manual / external */|||simd_cross([1], [2])|||/* manual cross */||\mathbf{[1]} \times \mathbf{[2]}
+🔑|||matrix_solve|||Solve Linear System Ax = b|||np.linalg.solve([1], [2])|||/* math.js lusolve([1], [2]) */|||[1].lu().solve(&[2]).unwrap()|||/* gonum Solve */|||/* EJML solve */|||[1].colPivHouseholderQr().solve([2])|||/* MathNet Solve */|||/* Accelerate solve */|||/* KMath solve */|||[1]^{-1}[2]
+🧬|||matrix_eigen|||Compute Eigenvalues of Matrix|||np.linalg.eigvals([1])|||/* math.js eigs([1]) */|||/* nalgebra eigen */|||/* gonum Eigen */|||/* EJML eig */|||/* Eigen EigenSolver */|||/* MathNet Evd */|||/* Accelerate eig */|||/* KMath eigen */||\lambda_i
+🧪|||math_big_float|||Arbitrary Precision Floating Point|||decimal.Decimal([1])|||/* bignumber.js */|||bigdecimal::BigDecimal::from_str([1])|||new(big.Float).SetString([1])|||new BigDecimal([1])|||/* GMP mpf_t */|||/* BigDecimal external */|||/* BigDecimal external */|||BigDecimal([1])||\text{BigFloat}([1])
+🌀|||math_complex|||Create Complex Number (Real/Imag)|||complex([1], [2])|||/* math.js complex([1], [2]) */|||num_complex::Complex::new([1], [2])|||complex([1], [2])|||/* Apache Complex */|||std::complex<double>([1], [2])|||new Complex([1], [2])|||/* DSPComplex */|||/* KMath Complex */|||[1] + [2]i
+📐|||matrix_svd|||Singular Value Decomposition (SVD)|||np.linalg.svd([1])|||/* math.js svd([1]) */|||/* nalgebra svd */|||/* gonum SVD */|||/* EJML svd */|||[1].jacobiSvd(Eigen::ComputeThinU | Eigen::ComputeThinV)|||/* MathNet SVD */|||/* Accelerate SVD */|||/* KMath SVD */||\mathbf{U}\mathbf{\Sigma}\mathbf{V}^*
+📏|||vector_norm|||Euclidean Norm (L2 Norm) of Vector|||np.linalg.norm([1])|||/* math.js norm([1]) */|||[1].norm()|||mat.Norm([1], 2)|||/* EJML normF */|||[1].norm()|||/* MathNet Norm */|||/* vDSP_svemg */|||/* KMath norm */||\left\|\mathbf{[1]}\right\|
+🌊|||math_conv|||1D Linear Convolution of Two Signals|||np.convolve([1], [2])|||/* manual loop / dsp */|||/* manual loop */|||/* manual loop */|||/* manual loop */|||/* manual loop / FFTW */|||/* MathNet Convolve */|||/* vDSP_conv */|||/* manual loop */||\mathbf{[1]} * \mathbf{[2]}
+🔲|||matrix_identity|||Create Identity Matrix of Size N|||np.eye([1])|||/* math.js identity([1]) */|||Matrix::identity([1])|||/* gonum NewDiagonal */|||/* EJML identity */|||MatrixXd::Identity([1], [1])|||Matrix.Build.DenseIdentity([1])|||/* manual identity */|||/* KMath identity */||\mathbf{I}_{[1]}
+➕|||matrix_trace|||Trace of a Square Matrix|||np.trace([1])|||/* math.js trace([1]) */|||[1].trace()|||/* manual diagonal sum */|||/* EJML trace */|||[1].trace()|||/* MathNet Trace */|||/* manual diagonal sum */|||/* manual diagonal sum */||\text{tr}(\mathbf{[1]})
+🌀|||math_complex_conj|||Complex Conjugate of a Number|||[1].conjugate()|||/* math.js conj([1]) */|||[1].conj()|||cmplx.Conj([1])|||/* Apache Complex conj */|||std::conjugate([1])|||Complex.Conjugate([1])|||/* manual complex conj */|||/* KMath conj */||\overline{[1]}
+📐|||matrix_qr|||QR Decomposition of Matrix (A = QR)|||np.linalg.qr([1])|||/* math.js qr([1]) */|||/* nalgebra qr */|||/* gonum QR */|||/* EJML qr */|||[1].householderQr()|||/* MathNet QR */|||/* Accelerate QR */|||/* KMath QR */||\mathbf{Q}\mathbf{R}
+📐|||matrix_cholesky|||Cholesky Decomposition (A = LL^T)|||np.linalg.cholesky([1])|||/* math.js cholesky([1]) */|||/* nalgebra cholesky */|||/* gonum Cholesky */|||/* EJML cholesky */|||[1].llt()|||/* MathNet Cholesky */|||/* Accelerate Cholesky */|||/* KMath Cholesky */||\mathbf{L}\mathbf{L}^T
+✖️|||matrix_kron|||Kronecker Product of Two Matrices|||np.kron([1], [2])|||/* math.js kron([1], [2]) */|||/* nalgebra kron */|||/* manual/external */|||/* EJML kron */|||/* Eigen KroneckerProduct */|||/* MathNet Kron */|||/* manual kron */|||/* KMath kron */|||[1] \otimes [2]
+✖️|||matrix_hadamard|||Element-wise Matrix Multiplication|||[1] * [2]|||/* math.js mul([1], [2]) */|||[1].component_mul(&[2])|||/* gonum MulElem */|||/* EJML elementwiseMult */|||[1].cwiseProduct([2])|||/* MathNet PointwiseMultiply */|||/* vDSP_vmul */|||/* KMath pointwise product */|||[1] \circ [2]
+📏|||matrix_norm_fro|||Frobenius Norm of a Matrix|||np.linalg.norm([1], 'fro')|||/* math.js norm([1], 'fro') */|||[1].norm()|||mat.Norm([1], 2)|||/* EJML normF */|||[1].norm()|||/* MathNet FrobeniusNorm */|||/* vDSP_svemg */|||/* KMath frobenius norm */||\left\|\mathbf{[1]}\right\|_F
+🌊|||math_fft2|||2D Fast Fourier Transform (2D FFT)|||np.fft.fft2([1])|||/* external 2D FFT */|||/* external 2D FFT */|||/* external 2D FFT */|||/* JTransforms 2D */|||/* FFTW 2D */|||/* MathNet FFT2D */|||/* vDSP_fft2d */|||/* KMath FFT2D */||\mathcal{F}_2\{[1]\}
+📈|||math_integrate|||Numerical Integration (Trapezoidal Rule)|||np.trapz([1], [2])|||/* manual trapezoidal loop */|||/* manual trapezoidal loop */|||/* manual trapezoidal loop */|||/* Apache Commons Integrator */|||/* manual loop or Boost */|||/* MathNet Integrate */|||/* manual loop */|||/* KMath integrate */||\int [1] \, d[2]
+📉|||math_gradient|||Compute Numerical Gradient / Derivative|||np.gradient([1])|||/* manual finite differences */|||/* manual finite differences */|||/* manual finite differences */|||/* manual finite differences */|||/* manual finite differences */|||/* MathNet Diff */|||/* manual finite differences */|||/* KMath gradient */||\nabla [1]
+📊|||stats_mean|||Arithmetic Mean of Array / Vector|||np.mean([1])|||[1].reduce((a,b)=>a+b)/[1].length|||[1].iter().sum::<f64>() / [1].len() as f64|||/* manual loop sum/len */|||/* Apache Commons Mean */|||/* manual std::accumulate */|||/* MathNet Mean */|||/* vDSP_meanv */|||[1].average()||\mu_{[1]}
+📊|||stats_std|||Standard Deviation of Array / Vector|||np.std([1])|||/* manual std dev loop */|||/* manual variance sqrt */|||/* manual loop */|||/* Apache Commons StdDev */|||/* manual loop variance sqrt */|||/* MathNet StandardDeviation */|||/* manual or vDSP */|||/* manual math.sqrt */||\sigma_{[1]}
+🗺️|||stats_cov|||Compute Covariance Matrix|||np.cov([1])|||/* external / manual loop */|||/* external / manual loop */|||/* gonum stat.CovarianceMatrix */|||/* Apache Commons Covariance */|||/* manual loop */|||/* MathNet Covariance */|||/* manual loop */|||/* KMath covariance */||\mathbf{\Sigma}_{[1]}
+🎯|||math_linprog|||Solve Linear Programming Optimization|||scipy.optimize.linprog([1])|||/* javascript-lp-solver */|||/* coin_cbc or lp-modeler */|||/* GLPK / manual simplex */|||/* Apache Commons SimplexSolver */|||/* OR-Tools / GLPK */|||/* Google.OrTools */|||/* Accelerate linprog */|||/* KMath optimization */||\min \mathbf{c}^T\mathbf{x}
+🔒|||crypto_sha256|||Secure Hash Algorithm 256-bit|||hashlib.sha256([1]).hexdigest()|||crypto.createHash('sha256').update([1]).digest('hex')|||Sha256::digest([1])|||sha256.Sum256([1])|||MessageDigest.getInstance("SHA-256").digest([1])|||/* OpenSSL SHA256([1]) */|||SHA256.HashData([1])|||SHA256.hash(data: [1])|||MessageDigest.getInstance("SHA-256").digest([1])||\text{SHA-256}([1])
+🌳|||dist_merkle_root|||Compute Merkle Root from Leaves Hash List|||/* recursive pairwise hash loop */|||/* recursive crypto hash loop */|||/* iterative pairwise hashing */|||/* manual balance tree hashing */|||/* cryptographic tree traversal */|||/* iterative pairwise std::vector hash */|||/* block processing loop */|||/* cryptographic collection hashing */|||/* recursive buffer mapping */||\text{MerkleRoot}(\mathbf{[1]})
+🧠|||ml_softmax|||Softmax Activation Function|||np.exp([1]) / np.sum(np.exp([1]))|||/* exp([1]) / sum(exp([1])) */|||/* component-wise exp and sum */|||/* slice exponential normalization */|||/* vector math exponentiation */|||/* std::transform exp with sum */|||/* LINQ exponential normalization */|||/* vDSP_vexp and accumulation */|||/* array map exponentiation */||\frac{e^{[1]_i}}{\sum_j e^{[1]_j}}
+🌐|||graph_dijkstra|||Dijkstra Shortest Path (Adjacency Matrix)|||/* scipy.sparse.csgraph.dijkstra */|||/* manual priority queue loop */|||/* petgraph dijkstra */|||/* manual min-heap traversal */|||/* JGraphT dijkstra */|||/* std::priority_queue loop */|||/* manual Dictionary min-heap */|||/* custom Graph routing */|||/* priority queue mapping */||\text{Dijkstra}(\mathbf{[1]}, [2])
+🔑|||crypto_ecc_verify|||Verify Elliptic Curve Digital Signature|||/* ecdsa.VerifyingKey verify */|||/* crypto.verify 'ecdsa' */|||/* signature::Verifier verify */||||ecdsa.Verify([1], [2], [3], [4])|||/* Signature.getInstance verify */|||/* OpenSSL ECDSA_verify */|||/* ECDsa.VerifyData */|||/* CryptoKit.ECDSASignature verify */|||/* Signature.getInstance verify */||\text{Verify}_{ECDSA}([1], [2])
+🌌|||math_shannon_entropy|||Shannon Entropy of Probability Distribution|||-np.sum([1] * np.log2([1]))|||-[1].reduce((s, p) => s + p * Math.log2(p), 0)|||-[1].iter().map(|p| p * p.log2()).sum::<f64>()|||/* manual loop p * log2(p) */|||/* manual loop distribution sum */|||/* std::accumulate with custom lambda */|||/* LINQ Sum p * Log2(p) */|||/* manual Float array map */|||/* custom collection aggregation */|||-\sum_i p_i \log_2(p_i)
+⚛️|||quantum_hadamard|||Apply Hadamard Gate to Qubit|||qc.h([1])|||/* quantum-circuit h([1]) */|||/* qip Hadamard gate */|||/* grove.H([1]) */|||/* Strange qbit.h() */|||/* Qiskit C++ / custom unitary */|||/* Quantum Development Kit H([1]) */|||/* manual unitary matrix */|||/* custom quantum sim */||\mathcal{H}\left(|[1]\rangle\right)
+🔒|||crypto_zkp_verify|||Verify Zero-Knowledge Proof (zk-SNARK)|||/* zokrates_py verify */|||/* snarkjs.groth16.verify */|||/* arkworks_snark verify */|||/* gnark.Verify */|||/* bellman Java wrapper */|||/* libsnark verifier */|||/* zkSnark .NET Core */|||/* CryptoKit ZKP extension */|||/* arkworks wrapper */||\text{Verify}_{ZKP}(\pi, x)
+🔑|||crypto_homomorphic_add|||Homomorphic Addition of Encrypted Values|||/* tenseal.add([1], [2]) */|||/* Microsoft SEAL JS add */|||/* concrete-core homomorphic add */|||/* lattigo evaluator.Add */|||/* TFHE-java add */|||seal::Evaluator::add([1], [2])|||/* Microsoft.Research.SEAL Add */|||/* manual ring-LWE add */|||/* SEAL wrapper */|||[1] \oplus_{HE} [2]
+🧠|||ml_attention|||Scaled Dot-Product Attention|||/* softmax(Q @ K.T / sqrt(d)) @ V */|||/* tfjs.layers.attention */|||/* candle / burn attention loop */|||/* gorgonia attention layer */|||/* DeepLearning4j attention */|||/* LibTorch multi_head_attention_forward */|||/* TorchSharp multiheadattention */|||/* Accelerate attention weights */|||/* multihead attention mapping */||\text{softmax}\left(\frac{\mathbf{Q}\mathbf{K}^T}{\sqrt{d_k}}\right)\mathbf{V}
+🔗|||consensus_pbft|||Validate PBFT Consensus Vote Block|||/* state machine pre-prepare/prepare/commit */|||/* distributed state round check */|||/* tokio-based PBFT state checking */|||/* tendermint-core consensus vote */|||/* Hyperledger Besu PBFT engine */|||/* custom raft/pbft state validation */|||/* decentralized ledger round state */|||/* peer cluster consensus check */|||/* state machine validation */||\text{PBFT}_{valid}(\mathcal{B})
