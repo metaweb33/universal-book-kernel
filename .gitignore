@@ -1,0 +1,10 @@
+# Caches Python
+__pycache__/
+*.pyc
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Optionnel : dossiers de travail volumineux ou personnels
+workspace/blockchain-novel/
