@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Éditeur de Matrices OMEGA - UBK Core Tools</title>
+    <style>
+        :root {
+            --bg-color: #0f141c;
+            --panel-bg: #171d26;
+            --text-color: #e1e7ed;
+            --text-dim: #8b96a3;
+            --border-color: #2d3846;
+            --accent-color: #007acc;
+            --accent-hover: #0098ff;
+            --danger-color: #ce3e3e;
+            --danger-hover: #ef5353;
+            --success-color: #2ea44f;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            margin-bottom: 25px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 15px;
+        }
+
+        h1 {
+            margin: 0 0 5px 0;
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .subtitle {
+            color: var(--text-dim);
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .toolbar {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            background-color: var(--panel-bg);
+            padding: 15px;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-dim);
+        }
+
+        select {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            border: 1px solid var(--border-color);
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-size: 14px;
+            outline: none;
+            cursor: pointer;
+        }
+
+        button {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        button:hover {
+            background-color: var(--accent-hover);
+        }
+
+        button.btn-danger {
+            background-color: transparent;
+            color: var(--danger-color);
+            border: 1px solid var(--danger-color);
+            padding: 4px 8px;
+            font-size: 12px;
+        }
+
+        button.btn-danger:hover {
+            background-color: var(--danger-color);
+            color: white;
+        }
+
+        button.btn-success {
+            background-color: var(--success-color);
+        }
+
+        button.btn-success:hover {
+            background-color: #34bc61;
+        }
+
+        .table-container {
+            background-color: var(--panel-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            overflow-x: auto;
+            margin-bottom: 25px;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 14px;
+        }
+
+        th {
+            background-color: #1f2733;
+            padding: 12px;
+            font-weight: 600;
+            border-bottom: 2px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        td {
+            padding: 8px 12px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        tr:hover {
+            background-color: #1c232e;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            background-color: transparent;
+            border: 1px solid transparent;
+            color: var(--text-color);
+            padding: 4px 8px;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-family: inherit;
+            font-size: 14px;
+        }
+
+        input[type="text"]:focus {
+            background-color: var(--bg-color);
+            border-color: var(--accent-color);
+            outline: none;
+        }
+
+        .output-panel {
+            background-color: var(--panel-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 20px;
+        }
+
+        .output-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .output-title {
+            margin: 0;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        textarea {
+            width: 100%;
+            height: 180px;
+            background-color: var(--bg-color);
+            color: #a6acb9;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            padding: 12px;
+            font-family: "Courier New", Courier, monospace;
+            font-size: 13px;
+            resize: vertical;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--success-color);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-size: 14px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            display: none;
+            animation: fadeIn 0.3s, fadeOut 0.3s 2.7s;
+        }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Universal Matrix Editor</h1>
+        <p class="subtitle">Outil d'ingénierie et de débogage pour le moteur de rendu OMEGA (Format UBK)</p>
+    </header>
+
+    <div class="toolbar">
+        <label for="matrixSelector">Matrice active :</label>
+        <select id="matrixSelector" onchange="switchMatrix()">
+            <option value="md_matrix_rule">md_matrix_rule (Règles Markdown de base)</option>
+            <option value="omega_highlight_matrix">omega_highlight_matrix (Coloration syntaxique)</option>
+            <option value="omega_render_matrix">omega_render_matrix (Comportement de rendu & accessibilité)</option>
+        </select>
+        <button onclick="addRow()">+ Nouvelle ligne</button>
+    </div>
+
+    <div class="table-container">
+        <table id="matrixTable">
+            <thead id="tableHead"></thead>
+            <tbody id="tableBody"></tbody>
+        </table>
+    </div>
+
+    <div class="output-panel">
+        <div class="output-header">
+            <h3 class="output-title">Exportation CSV brut (Séparateur strict : <code style="color:var(--accent-hover)">|||</code>)</h3>
+            <button class="btn-success" onclick="copyToClipboard()">Copier pour GitHub</button>
+        </div>
+        <textarea id="csvOutput" readonly></textarea>
+    </div>
+</div>
+
+<div id="toast" class="toast">Contenu copié dans le presse-papiers !</div>
+
+<script>
+    // Configuration des architectures de colonnes des matrices
+    const schemas = {
+        md_matrix_rule: ["rule_id", "element_type", "markdown_syntax", "omega_token", "html_semantic", "description"],
+        omega_highlight_matrix: ["language", "token_type", "color_token", "opacity"],
+        omega_render_matrix: ["block_type", "blind_mode_priority", "text_to_speech", "description"]
+    };
+
+    // Données initiales pré-chargées pour le débogage
+    const dataset = {
+        md_matrix_rule: [
+            ["MD_H1", "block", "# ", "--omega-token-h1", "<h1>", "Titre majeur de niveau 1"],
+            ["MD_PARA", "block", "(default)", "--omega-token-p", "<p>", "Bloc de paragraphe standard"],
+            ["MD_BOLD_STAR", "inline", "**text**", "--omega-token-strong", "<strong>", "Emphase forte via double astérisque"]
+        ],
+        omega_highlight_matrix: [
+            ["java", "keyword", "--color-syntax-keyword", "1.0"],
+            ["python", "comment", "--color-syntax-comment", "0.6"],
+            ["json", "string", "--color-syntax-string", "1.0"]
+        ],
+        omega_render_matrix: [
+            ["h1", "1", "true", "Annonce le titre principal en priorité haute pour le Mode Aveugle"],
+            ["p", "3", "true", "Lecture séquentielle standard"],
+            ["code-block", "5", "false", "Désactive le Text-To-Speech sur les structures de code brut"]
+        ]
+    };
+
+    let currentMatrix = "md_matrix_rule";
+
+    function renderTable() {
+        const columns = schemas[currentMatrix];
+        const rows = dataset[currentMatrix];
+        
+        // Rendu de l'en-tête
+        const thead = document.getElementById("tableHead");
+        let headHtml = "<tr>";
+        columns.forEach(col => {
+            headHtml += `<th>${col}</th>`;
+        });
+        headHtml += `<th style="width: 50px; text-align: center;">Actions</th></tr>`;
+        thead.innerHTML = headHtml;
+
+        // Rendu du corps de la table
+        const tbody = document.getElementById("tableBody");
+        tbody.innerHTML = "";
+
+        rows.forEach((row, rowIndex) => {
+            const tr = document.createElement("tr");
+            
+            columns.forEach((col, colIndex) => {
+                const td = document.createElement("td");
+                const input = document.createElement("input");
+                input.type = "text";
+                input.value = row[colIndex] || "";
+                input.oninput = (e) => updateValue(rowIndex, colIndex, e.target.value);
+                td.appendChild(input);
+                tr.appendChild(td);
+            });
+
+            // Bouton de suppression
+            const actionTd = document.createElement("td");
+            actionTd.style.textAlign = "center";
+            const deleteBtn = document.createElement("button");
+            deleteBtn.className = "btn-danger";
+            deleteBtn.innerHTML = "Suppr.";
+            deleteBtn.onclick = () => deleteRow(rowIndex);
+            actionTd.appendChild(deleteBtn);
+            tr.appendChild(actionTd);
+
+            tbody.appendChild(tr);
+        });
+
+        generateCSV();
+    }
+
+    function updateValue(rowIndex, colIndex, value) {
+        dataset[currentMatrix][rowIndex][colIndex] = value;
+        generateCSV();
+    }
+
+    function addRow() {
+        const columnCount = schemas[currentMatrix].length;
+        const newRow = Array(columnCount).fill("");
+        dataset[currentMatrix].push(newRow);
+        renderTable();
+    }
+
+    function deleteRow(rowIndex) {
+        dataset[currentMatrix].splice(rowIndex, 1);
+        renderTable();
+    }
+
+    function switchMatrix() {
+        currentMatrix = document.getElementById("matrixSelector").value;
+        renderTable();
+    }
+
+    function generateCSV() {
+        const columns = schemas[currentMatrix];
+        const rows = dataset[currentMatrix];
+        
+        let csvContent = columns.join("|||") + "\n";
+        
+        rows.forEach(row => {
+            csvContent += row.join("|||") + "\n";
+        });
+        
+        document.getElementById("csvOutput").value = csvContent.trim();
+    }
+
+    function copyToClipboard() {
+        const textarea = document.getElementById("csvOutput");
+        textarea.select();
+        document.execCommand("copy");
+        
+        const toast = document.getElementById("toast");
+        toast.style.display = "block";
+        setTimeout(() => {
+            toast.style.display = "none";
+        }, 3000);
+    }
+
+    // Initialisation au chargement de la page
+    window.onload = () => {
+        renderTable();
+    };
+</script>
+
+</body>
+</html>
